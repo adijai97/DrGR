@@ -1,0 +1,91 @@
+.pageBg { position: relative; background: #fff; }
+.journeyGradient { position: absolute; top: 0; left: 0; right: 0; height: 892px; background: linear-gradient(to bottom, rgba(224,176,180,0.5), rgba(255,255,255,0.5)); z-index: 0; pointer-events: none; }
+.pageContent { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+.inner { max-width: 1440px; width: 100%; padding: 0 80px 160px; display: flex; flex-direction: column; gap: 80px; }
+
+.bioHero { display: flex; gap: 80px; align-items: flex-start; width: 100%; }
+.bioHeroLeft { flex: 1; display: flex; flex-direction: column; gap: 48px; }
+.bioHeroHeading { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 32px; line-height: 1.2; color: var(--neem900); text-align: right; }
+.storyItems { display: flex; flex-direction: column; gap: 32px; }
+.storyItem { display: flex; gap: 24px; align-items: center; }
+.storyAvatar { width: 100px; height: 100px; border-radius: 50%; background: #f0d8da; flex-shrink: 0; overflow: hidden; }
+.storyAvatar img { width: 100%; height: 100%; object-fit: cover; }
+.storyText { font-size: 18px; line-height: 28px; color: var(--neem800); }
+.bioHeroRight { flex: 1; border-radius: 16px; overflow: hidden; aspect-ratio: 590/616; }
+.bioHeroRight img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.harmonyBox { background: var(--terracotta50); border-radius: 16px; padding: 48px; display: flex; gap: 80px; width: 100%; }
+.harmonyLeft { width: 461px; flex-shrink: 0; }
+.harmonyText1 { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 22px; line-height: 1.4; color: #2c2c2c; }
+.harmonyText2 { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 28px; line-height: 1.3; color: var(--terracotta); }
+.harmonyRight { flex: 1; font-size: 18px; line-height: 28px; color: var(--neem800); }
+
+.philosophySection { padding: 0 80px; display: flex; flex-direction: column; gap: 48px; align-items: center; width: 100%; }
+.philosophyHeader { display: flex; flex-direction: column; gap: 24px; align-items: center; }
+.sectionLabel { font-family: var(--font-noto-serif), serif; font-style: italic; font-size: 20px; line-height: 1; letter-spacing: 3px; text-transform: uppercase; color: var(--terracotta700); }
+.philosophySubheading { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 18px; line-height: 1.5; color: #2c2c2c; text-align: center; }
+.philosophyContent { display: flex; flex-direction: column; gap: 48px; align-items: center; }
+.philosophyImage { width: 328px; height: 328px; border-radius: 1000px; overflow: hidden; }
+.philosophyImage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.philosophyBody { font-size: 18px; line-height: 28px; color: var(--neem800); text-align: center; max-width: 760px; }
+
+.approachBox { background: var(--terracotta50); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 48px; width: 100%; }
+.approachLabel { font-family: var(--font-noto-serif), serif; font-style: italic; font-size: 20px; line-height: 1; letter-spacing: 3px; text-transform: uppercase; color: var(--terracotta700); text-align: right; }
+.approachCols { display: flex; gap: 80px; }
+.approachLeft { flex: 1; font-size: 18px; line-height: 28px; color: var(--neem800); }
+.approachRight { flex: 1; }
+.approachQuote { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 28px; line-height: 1.3; color: var(--terracotta); margin-bottom: 24px; }
+.approachBody { font-size: 18px; line-height: 28px; color: var(--neem800); }
+
+.gardenerSection { display: flex; flex-direction: column; gap: 48px; width: 100%; }
+.gardenerHeading { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 32px; line-height: 1.2; color: var(--neem900); text-align: center; }
+.gardenerGrid { display: flex; flex-direction: column; gap: 48px; }
+.gardenerRow { display: flex; gap: 48px; }
+.gardenerItem { display: flex; gap: 24px; align-items: center; flex: 1; }
+.single { flex: 0 0 536px; }
+.gardenerAvatar { width: 100px; height: 100px; border-radius: 50%; background: #f0d8da; flex-shrink: 0; overflow: hidden; }
+.gardenerAvatar img { width: 100%; height: 100%; object-fit: cover; }
+.gardenerText { font-size: 18px; line-height: 28px; color: var(--neem800); }
+
+.testimonialSection { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+.sectionHeader { display: flex; align-items: center; justify-content: space-between; }
+.sectionHeaderLabel { font-family: var(--font-noto-serif), serif; font-style: italic; font-size: 20px; line-height: 1; letter-spacing: 3px; color: var(--neem900); }
+.linkBtn { display: flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 8px; font-size: 18px; font-weight: 700; color: var(--terracotta); text-decoration: none; }
+.testimonialBox { border: 2px solid var(--terracotta200); border-radius: 16px; padding: 48px 40px; display: flex; gap: 64px; align-items: center; }
+.testimonialArrow { width: 24px; height: 24px; flex-shrink: 0; cursor: pointer; background: none; border: none; padding: 0; }
+.testimonialArrow img { width: 100%; height: 100%; }
+.testimonialArrowNext { transform: rotate(180deg) scaleY(-1); }
+.testimonialContent { flex: 1; display: flex; flex-direction: column; gap: 48px; }
+.testimonialContent blockquote { font-weight: 500; font-size: 24px; line-height: 1.4; color: var(--neem900); }
+.testimonialAuthor { display: flex; gap: 24px; align-items: center; }
+.testimonialAvatar { width: 72px; height: 72px; border-radius: 40px; overflow: hidden; flex-shrink: 0; background: var(--terracotta200); }
+.testimonialAvatar img { width: 100%; height: 100%; object-fit: cover; }
+.testimonialName { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 24px; color: var(--neem900); margin-bottom: 8px; }
+.testimonialRole { font-size: 20px; line-height: 28px; color: var(--neem800); }
+
+@media (max-width: 768px) {
+  .journeyGradient { display: none; }
+  .inner { padding: 24px 24px 80px; gap: 64px; }
+  .bioHero { flex-direction: column; gap: 32px; }
+  .bioHeroRight { width: 100%; order: -1; }
+  .bioHeroHeading { font-size: 24px; text-align: left; }
+  .storyAvatar { width: 72px; height: 72px; }
+  .storyText { font-size: 16px; line-height: 24px; }
+  .harmonyBox { flex-direction: column; gap: 32px; padding: 24px; }
+  .harmonyLeft { width: 100%; }
+  .philosophySection { padding: 0; gap: 32px; }
+  .philosophyImage { width: 240px; height: 240px; }
+  .philosophyBody { font-size: 16px; line-height: 24px; }
+  .approachBox { padding: 24px; gap: 32px; }
+  .approachCols { flex-direction: column; gap: 32px; }
+  .approachLeft { font-size: 16px; line-height: 24px; }
+  .approachQuote { font-size: 22px; }
+  .gardenerHeading { font-size: 24px; }
+  .gardenerRow { flex-direction: column; gap: 32px; }
+  .single { flex: unset; width: 100%; }
+  .gardenerAvatar { width: 72px; height: 72px; }
+  .gardenerText { font-size: 16px; line-height: 24px; }
+  .testimonialBox { flex-direction: column; gap: 24px; padding: 32px; }
+  .testimonialArrow { display: none; }
+  .testimonialContent blockquote { font-size: 18px; }
+}

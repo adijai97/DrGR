@@ -1,0 +1,77 @@
+.qaWidget {
+  position: fixed; right: 80px; bottom: 40px;
+  z-index: 200; display: flex; align-items: flex-end; justify-content: flex-end;
+}
+.qaAv { overflow: hidden; border-radius: 31px; }
+.qaAv img { width: 100%; height: 125.67%; object-fit: cover; margin-top: -12.82%; display: block; }
+.qaPill {
+  display: flex; align-items: center; gap: 15px;
+  padding: 8px 24px 8px 8px; border-radius: 127px;
+  background: linear-gradient(144deg, #d3bce3 5.5%, #f6deb6 95%);
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15), 0px 1px 3px rgba(0,0,0,0.3);
+  border: none; cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.qaPill:hover { opacity: 0.9; transform: translateY(-3px) scale(1.02); }
+.qaPill .qaAv { width: 46px; height: 48px; flex-shrink: 0; }
+.qaPillText {
+  font-family: var(--font-noto-serif), serif; font-style: italic; font-weight: 600;
+  font-size: 16px; color: #181f14; white-space: nowrap;
+}
+.qaAvatarBtn {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: linear-gradient(144deg, #d3bce3 5.5%, #f6deb6 95%);
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15), 0px 1px 3px rgba(0,0,0,0.3);
+  border: none; cursor: pointer; padding: 8px; overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.qaAvatarBtn:hover { transform: scale(1.08); box-shadow: 0px 6px 16px rgba(0,0,0,0.2); }
+.qaAvatarInner { width: 100%; height: 100%; border-radius: 24px; }
+.qaCard {
+  display: flex; flex-direction: column; gap: 12px; padding: 8px;
+  border-radius: 8px; width: 520px;
+  background: linear-gradient(175deg, #c092e0 5.5%, #f6deb6 48%);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+  animation: slideUpFade 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  transform-origin: bottom right;
+}
+.qaCardHeader { display: flex; align-items: center; justify-content: space-between; }
+.qaCardTitle { display: flex; align-items: center; gap: 8px; }
+.qaCardAv { width: 20px; height: 20px; flex-shrink: 0; }
+.qaCardAvInner { width: 20px; height: 20px; border-radius: 13px; }
+.qaCardName {
+  font-family: var(--font-noto-serif), serif; font-style: italic; font-weight: 600;
+  font-size: 14px; color: #181f14; white-space: nowrap;
+}
+.qaCloseBtn { background: none; border: none; cursor: pointer; padding: 0; width: 16px; height: 16px; }
+.qaCloseBtn img { width: 16px; height: 16px; display: block; }
+.qaInputBar {
+  background: #f5eff7; border-radius: 8px; padding: 12px 16px;
+  display: flex; align-items: center; gap: 12px;
+}
+.qaInputBar input {
+  background: none; border: none; outline: none; flex: 1; min-width: 0;
+  font-family: var(--font-noto-sans), sans-serif; font-size: 16px; line-height: 24px; color: #111;
+}
+.qaInputBar input::placeholder { color: #747474; }
+.qaSendBtn { background: none; border: none; cursor: pointer; padding: 0; display: flex; align-items: center; }
+.qaSendBtn img { width: 20px; height: 20px; display: block; }
+
+/* ─── Keyframes ───────────────────────────────────────────────────── */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: scale(0.95) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .qaWidget { right: 20px; bottom: 20px; }
+  .qaCard { width: calc(100vw - 40px); }
+  .qaPillText { font-size: 14px; }
+}

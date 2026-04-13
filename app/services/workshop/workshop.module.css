@@ -1,0 +1,273 @@
+/* ─── Page shell ─────────────────────────────────────────────────── */
+.pageBg { position: relative; background: #fff; }
+
+.heroGradient {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 500px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 100%),
+    linear-gradient(90deg, #e3f6db 0%, #e2a7b6 50%, #e3f6db 100%);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pageContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner {
+  max-width: 1440px;
+  width: 100%;
+  padding: 64px 160px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ─── Hero ────────────────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+  padding-top: 48px;
+}
+
+.goBack {
+  position: absolute;
+  left: 0; top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--neem700);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.goBack:hover { opacity: 0.8; }
+
+.pageTitle {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--neem700);
+  text-align: center;
+}
+
+.pageSubtitle {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--neem900);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.tags { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+.tag {
+  background: #f2d9df;
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--neem700);
+  letter-spacing: 0.5px;
+}
+
+/* ─── Two-col ─────────────────────────────────────────────────────── */
+.twoCol { display: flex; gap: 48px; align-items: stretch; width: 100%; }
+
+.descCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.descTextGroup { display: flex; flex-direction: column; gap: 16px; }
+
+.descTitle {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--neem700);
+  line-height: 1.35;
+}
+
+.descBody {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #181f14;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--neem700);
+  color: #fff;
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0px 1px 2px rgba(10,13,18,0.05);
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+.ctaBtn:hover { opacity: 0.85; }
+
+.imageCol {
+  flex: 1;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 268px;
+  align-self: stretch;
+}
+
+.subtractImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Rose banner ─────────────────────────────────────────────────── */
+.roseBanner {
+  background: #f2d9df;
+  padding: 48px;
+  border-radius: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.roseBanner p {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+  color: #99334d;
+  line-height: 1.45;
+}
+
+/* ─── Section label ───────────────────────────────────────────────── */
+.sectionLabel {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #0d1426;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 100%;
+}
+
+/* ─── How It Works — stacked cards ───────────────────────────────── */
+.howSection { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+
+.cardStack { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+
+.card {
+  border: 1px solid #dbdbdb;
+  border-radius: 16px;
+  padding: 24px 32px;
+  width: 100%;
+}
+
+.cardTitle {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
+  color: #758e69;
+  line-height: 1.4;
+}
+
+/* ─── When & Where ────────────────────────────────────────────────── */
+.whenSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.whenText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.whenText p {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #181f14;
+}
+
+/* ─── Closing CTA banner — split layout ──────────────────────────── */
+.ctaBanner {
+  background: #f2d9df;
+  padding: 48px;
+  border-radius: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.ctaBannerText {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+  color: #99334d;
+  line-height: 1.35;
+}
+
+/* ─── Mobile ──────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .inner { padding: 64px 80px 100px; }
+}
+
+@media (max-width: 768px) {
+  .inner { padding: 32px 24px 80px; gap: 48px; }
+  .hero { padding-top: 40px; }
+  .goBack { font-size: 16px; }
+  .pageTitle { font-size: 32px; }
+
+  .twoCol { flex-direction: column; }
+  .imageCol { min-height: 220px; }
+
+  .roseBanner { padding: 32px 24px; }
+  .roseBanner p { font-size: 22px; }
+
+  .ctaBanner { flex-direction: column; align-items: flex-start; padding: 32px 24px; }
+  .ctaBannerText { font-size: 22px; }
+}
