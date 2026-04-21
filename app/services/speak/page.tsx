@@ -3,8 +3,8 @@ import styles from "./speak.module.css";
 
 export const metadata = { title: "Invite Me to Speak – Dr. Gauri Rokkam" };
 
-const imgSubtract  = "https://www.figma.com/api/mcp/asset/9d21f3eb-607f-49ef-bec3-834a89d2ad19";
-const imgArrowLeft = "https://www.figma.com/api/mcp/asset/7dcf7d53-0497-43e9-bc26-c5851b266d1a";
+const imgSubtract  = "/images/subtract.png";
+const imgArrowLeft = "/images/icons/arrow-left.svg";
 
 const WHAT_I_ENGAGE_ON = [
   "Lifestyle diseases (diabetes, hypertension, obesity, etc.)",

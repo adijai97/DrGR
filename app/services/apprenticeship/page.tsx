@@ -3,8 +3,8 @@ import styles from "./apprenticeship.module.css";
 
 export const metadata = { title: "The Apprenticeship – Dr. Gauri Rokkam" };
 
-const imgSubtract  = "https://www.figma.com/api/mcp/asset/e2513818-dc98-4ce2-81fb-2f1664081252";
-const imgArrowLeft = "https://www.figma.com/api/mcp/asset/9b6912da-c31c-4b96-a2bb-59cc60d2d21e";
+const imgSubtract  = "/images/subtract.png";
+const imgArrowLeft = "/images/icons/arrow-left.svg";
 
 const HOW_IT_WORKS = [
   "20-hour observer-based internship",

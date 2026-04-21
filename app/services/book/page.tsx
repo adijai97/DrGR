@@ -3,8 +3,8 @@ import styles from "./book.module.css";
 
 export const metadata = { title: "Craft Your Wellness – Dr. Gauri Rokkam" };
 
-const imgSubtract  = "https://www.figma.com/api/mcp/asset/2230cb72-cf10-4d9c-b7ad-f2809b250886";
-const imgArrowLeft = "https://www.figma.com/api/mcp/asset/c056a754-4096-48be-ac0b-962e3f000b41";
+const imgSubtract  = "/images/subtract.png";
+const imgArrowLeft = "/images/icons/arrow-left.svg";
 
 const WHAT_IT_COVERS = [
   "The foundations of true health — beyond symptoms and quick fixes",

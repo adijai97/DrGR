@@ -4,11 +4,11 @@ import Link from "next/link";
 import styles from "./e-course.module.css";
 
 // Figma asset URLs
-const imgSubtract   = "https://www.figma.com/api/mcp/asset/e6955767-f2d5-449b-8f60-f397a1db2f18";
-const imgArrowLeft  = "https://www.figma.com/api/mcp/asset/9d8cfb8d-cf48-4d97-bc65-5549439ccb0c";
-const imgArrowRight = "https://www.figma.com/api/mcp/asset/c92c5f63-b0f0-4952-82d9-3fe9b42fbca3";
-const imgVector     = "https://www.figma.com/api/mcp/asset/68fa803b-e09b-43fc-8f44-82fc8d1b9aa3";
-const imgAvatar     = "https://www.figma.com/api/mcp/asset/d2498c26-a225-4eba-9767-4de2b906a17f";
+const imgSubtract   = "/images/subtract.png";
+const imgArrowLeft  = "/images/icons/arrow-left.svg";
+const imgArrowRight = "/images/icons/arrow-right.svg";
+const imgVector     = "/images/icons/arrow-right.svg";
+const imgAvatar     = "/images/avatar.png";
 
 const MODULES = [
   {

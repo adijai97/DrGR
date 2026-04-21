@@ -4,10 +4,10 @@ import Link from "next/link";
 import styles from "./heal-thy-self.module.css";
 
 // Figma asset URLs
-const imgSubtract = "https://www.figma.com/api/mcp/asset/3963bb8a-9294-4683-895f-9825d7c4bf8b";
-const imgArrowLeft = "https://www.figma.com/api/mcp/asset/bc35be48-87dd-4cd1-b8b5-56c1f238825d";
-const imgVector = "https://www.figma.com/api/mcp/asset/5990cc97-8e5a-4b73-81d6-1ad53499673e";
-const imgAvatar = "https://www.figma.com/api/mcp/asset/8b86a33c-2d01-4531-a2b1-e43c124fe514";
+const imgSubtract = "/images/subtract.png";
+const imgArrowLeft = "/images/icons/arrow-left.svg";
+const imgVector = "/images/icons/arrow-right.svg";
+const imgAvatar = "/images/avatar.png";
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const MONTHS = [

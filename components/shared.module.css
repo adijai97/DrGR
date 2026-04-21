@@ -1,9 +1,11 @@
 /* Header */
 .header {
-  display: flex; align-items: center; justify-content: space-between;
   max-width: 1440px; margin: 0 auto;
   padding: 48px 80px 40px;
   position: relative; z-index: 100;
+}
+.headerRow {
+  display: flex; align-items: center; justify-content: space-between;
 }
 .logo img { height: 48px; width: auto; display: block; }
 .navDesktop { display: flex; align-items: center; gap: 48px; }
@@ -30,6 +32,38 @@
 .langBtn img { width: 24px; height: 24px; }
 .menuBtn { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
 .menuBtn img { width: 24px; height: 24px; display: block; }
+
+/* Mobile inline menu — pushes content down */
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 32px 0 16px;
+  animation: mobileMenuSlide 180ms ease-out;
+}
+@keyframes mobileMenuSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mobileNavLink,
+.mobileNavLinkActive {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  padding: 12px 8px;
+  text-decoration: none;
+  text-align: center;
+}
+.mobileNavLink {
+  font-weight: 600;
+  color: var(--neem900);
+}
+.mobileNavLinkActive {
+  font-weight: 900;
+  color: var(--terracotta);
+}
 
 /* Footer */
 .footer {
@@ -60,8 +94,6 @@
 .footerContactAddress { font-size: 18px; line-height: 1.6; color: var(--neem300); }
 .footerSocialRow { display: flex; gap: 12px; align-items: center; margin-top: 24px; flex-wrap: wrap; }
 .socialIconLg { width: 36px; height: 36px; display: block; }
-.socialIconCircle { display: none; }
-.socialIconCircle img { width: 40px; height: 40px; display: block; }
 .footerServicesList { display: flex; flex-direction: column; gap: 16px; }
 .footerServicesList p { font-size: 18px; color: var(--neem300); line-height: 1; cursor: pointer; }
 .footerForm { display: flex; flex-direction: column; gap: 16px; }
@@ -100,8 +132,6 @@
   .iconSm { display: block; }
   .footerContactText { font-size: 16px; }
   .footerContactAddress { font-size: 16px; }
-  .socialIconLg { display: none; }
-  .socialIconCircle { display: block; }
   .footerBottom { flex-direction: column; gap: 16px; align-items: flex-start; }
   .formRow { flex-direction: column; }
 }

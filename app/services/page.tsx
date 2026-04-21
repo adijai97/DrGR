@@ -19,17 +19,17 @@ export default function ServicesPage() {
               <a href="/services/heal-thy-self" className={`${styles.svcCard} ${styles.h300} ${styles.wide} ${styles.gradTeal}`}>
                 <div className={styles.cardHeader}>
                   <p className={styles.cardTitle}>☘️ Heal Thy Self Program</p>
-                  <div className={styles.cardArrow}><img src="https://www.figma.com/api/mcp/asset/8dc783ee-73d8-4c4e-a21d-c7df4fccd031" alt="→" /></div>
+                  <div className={styles.cardArrow}><img src="/images/icons/arrow-right.svg" alt="→" /></div>
                 </div>
-                <img className={styles.cardDecorL} src="https://www.figma.com/api/mcp/asset/347820d3-7184-400f-b9bc-c6169a72cbcd" alt="" />
-                <img className={styles.cardDecorR} src="https://www.figma.com/api/mcp/asset/347820d3-7184-400f-b9bc-c6169a72cbcd" alt="" />
+                <img className={styles.cardDecorL} src="/images/subtract.png" alt="" />
+                <img className={styles.cardDecorR} src="/images/subtract.png" alt="" />
               </a>
               <a href="/services/e-course" className={`${styles.svcCard} ${styles.h300} ${styles.narrow} ${styles.gradSand}`}>
                 <div className={styles.cardHeader}>
                   <p className={styles.cardTitle}>📚 E-Course</p>
-                  <div className={styles.cardArrow}><img src="https://www.figma.com/api/mcp/asset/8dc783ee-73d8-4c4e-a21d-c7df4fccd031" alt="→" /></div>
+                  <div className={styles.cardArrow}><img src="/images/icons/arrow-right.svg" alt="→" /></div>
                 </div>
-                <img className={styles.cardDecorL} src="https://www.figma.com/api/mcp/asset/347820d3-7184-400f-b9bc-c6169a72cbcd" alt="" />
+                <img className={styles.cardDecorL} src="/images/subtract.png" alt="" />
               </a>
             </div>
 
@@ -43,9 +43,9 @@ export default function ServicesPage() {
                 <a key={c.title} href={c.href} className={`${styles.svcCard} ${styles.h300} ${styles.equal} ${c.grad}`}>
                   <div className={styles.cardHeader}>
                     <p className={styles.cardTitle}>{c.emoji} {c.title}</p>
-                    <div className={styles.cardArrow}><img src="https://www.figma.com/api/mcp/asset/8dc783ee-73d8-4c4e-a21d-c7df4fccd031" alt="→" /></div>
+                    <div className={styles.cardArrow}><img src="/images/icons/arrow-right.svg" alt="→" /></div>
                   </div>
-                  <img className={styles.cardDecorL} src="https://www.figma.com/api/mcp/asset/347820d3-7184-400f-b9bc-c6169a72cbcd" alt="" />
+                  <img className={styles.cardDecorL} src="/images/subtract.png" alt="" />
                 </a>
               ))}
             </div>
@@ -55,13 +55,13 @@ export default function ServicesPage() {
               <a href="/services/apprenticeship" className={`${styles.svcCard} ${styles.h170} ${styles.wide} ${styles.gradMint}`}>
                 <div className={styles.cardHeader}>
                   <p className={styles.cardTitle}>👁️ Apprenticeship</p>
-                  <div className={styles.cardArrow}><img src="https://www.figma.com/api/mcp/asset/8dc783ee-73d8-4c4e-a21d-c7df4fccd031" alt="→" /></div>
+                  <div className={styles.cardArrow}><img src="/images/icons/arrow-right.svg" alt="→" /></div>
                 </div>
               </a>
               <a href="/services/speak" className={`${styles.svcCard} ${styles.h170} ${styles.narrow} ${styles.gradGold}`}>
                 <div className={`${styles.cardHeader} ${styles.cardHeaderTop}`}>
                   <p className={styles.cardTitle}>🎤 Invite me<br />to Speak</p>
-                  <div className={styles.cardArrow}><img src="https://www.figma.com/api/mcp/asset/8dc783ee-73d8-4c4e-a21d-c7df4fccd031" alt="→" /></div>
+                  <div className={styles.cardArrow}><img src="/images/icons/arrow-right.svg" alt="→" /></div>
                 </div>
               </a>
             </div>

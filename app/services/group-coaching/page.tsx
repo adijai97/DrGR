@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styles from "./group-coaching.module.css";
 
-const imgSubtract  = "https://www.figma.com/api/mcp/asset/06bd29cc-9dc2-4d8e-9602-8c08dd5c4ffb";
-const imgArrowLeft = "https://www.figma.com/api/mcp/asset/c0958c60-e0e6-4bc2-b8eb-a28c84774094";
+const imgSubtract  = "/images/subtract.png";
+const imgArrowLeft = "/images/icons/arrow-left.svg";
 
 const HOW_IT_WORKS = [
   {

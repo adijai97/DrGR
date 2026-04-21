@@ -4,15 +4,15 @@ import { useState, Suspense } from "react";
 import Link from "next/link";
 import styles from "./results.module.css";
 
-const imgArrowLeft   = "https://www.figma.com/api/mcp/asset/c6ebca8a-e9ea-4740-bc19-88e2a9b83d2a";
-const imgRating      = "https://www.figma.com/api/mcp/asset/05e86abd-4f04-4605-a628-4863e2e7b1d6";
-const imgAvatar      = "https://www.figma.com/api/mcp/asset/0af1881f-8d49-49d5-b0ba-cea10c970a1c";
-const imgBlog1       = "https://www.figma.com/api/mcp/asset/674d34ba-6646-4459-ae4b-9f58e3df46f8";
-const imgBlog2       = "https://www.figma.com/api/mcp/asset/4cdff5e3-5dd2-430e-9718-7ce4941be6a1";
-const imgSubtract    = "https://www.figma.com/api/mcp/asset/55410795-ad7e-4871-9e73-5d9385e67376";
-const imgArrowUpRight = "https://www.figma.com/api/mcp/asset/e2c5c617-5776-4f3f-8591-385058b32a87";
-const imgSend        = "https://www.figma.com/api/mcp/asset/801ecb5c-4c21-4dfe-9c19-045858b02a15";
-const imgX           = "https://www.figma.com/api/mcp/asset/bb9cfa39-62a3-4146-88dc-ed98b34e38ed";
+const imgArrowLeft   = "/images/icons/arrow-left.svg";
+const imgRating      = "/images/icons/stars.svg";
+const imgAvatar      = "/images/avatar.png";
+const imgBlog1       = "/images/blog-protein.png";
+const imgBlog2       = "/images/blog-coconut.png";
+const imgSubtract    = "/images/subtract.png";
+const imgArrowUpRight = "/images/icons/arrow-up-right.svg";
+const imgSend        = "/images/icons/send.svg";
+const imgX           = "/images/icons/close.svg";
 
 function ResultsContent() {
   const searchParams = useSearchParams();

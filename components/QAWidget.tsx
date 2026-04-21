@@ -21,7 +21,7 @@ export default function QAWidget() {
       {state === "pill" && (
         <button className={styles.qaPill} onClick={() => setState("card")} aria-label="Ask Dr. Gauri">
           <div className={styles.qaAv}>
-            <img src="https://www.figma.com/api/mcp/asset/e1cadc04-43b9-4d15-bc96-d4c1f1f6ebdb" alt="Dr. Gauri" />
+            <img src="/images/dr-gauri-portrait.png" alt="Dr. Gauri" />
           </div>
           <span className={styles.qaPillText}>Explain your symptoms to me...</span>
         </button>
@@ -29,7 +29,7 @@ export default function QAWidget() {
       {state === "avatar" && (
         <button className={styles.qaAvatarBtn} onClick={() => setState("card")} aria-label="Ask Dr. Gauri">
           <div className={`${styles.qaAv} ${styles.qaAvatarInner}`}>
-            <img src="https://www.figma.com/api/mcp/asset/e1cadc04-43b9-4d15-bc96-d4c1f1f6ebdb" alt="Dr. Gauri" />
+            <img src="/images/dr-gauri-portrait.png" alt="Dr. Gauri" />
           </div>
         </button>
       )}
@@ -39,13 +39,13 @@ export default function QAWidget() {
             <div className={styles.qaCardTitle}>
               <div className={styles.qaCardAv}>
                 <div className={`${styles.qaAv} ${styles.qaCardAvInner}`}>
-                  <img src="https://www.figma.com/api/mcp/asset/e1cadc04-43b9-4d15-bc96-d4c1f1f6ebdb" alt="" />
+                  <img src="/images/dr-gauri-portrait.png" alt="" />
                 </div>
               </div>
               <span className={styles.qaCardName}>Ask Dr Gauri</span>
             </div>
             <button className={styles.qaCloseBtn} onClick={() => setState("avatar")} aria-label="Close">
-              <img src="https://www.figma.com/api/mcp/asset/67f3afbe-9e02-4e62-96d8-5f90b3d5a1dd" alt="×" />
+              <img src="/images/icons/close.svg" alt="×" />
             </button>
           </div>
           <div className={styles.qaInputBar}>
@@ -57,7 +57,7 @@ export default function QAWidget() {
               onKeyDown={(e) => e.key === "Enter" && sendQuery()}
             />
             <button className={styles.qaSendBtn} onClick={sendQuery} aria-label="Send">
-              <img src="https://www.figma.com/api/mcp/asset/1e6f1404-bbde-4599-aec3-4efc926c22e6" alt="Send" />
+              <img src="/images/icons/send.svg" alt="Send" />
             </button>
           </div>
         </div>

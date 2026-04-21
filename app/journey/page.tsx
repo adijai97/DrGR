@@ -21,14 +21,14 @@ export default function JourneyPage() {
                   "But the more I learned, the more I felt something was missing...",
                 ].map((text, i) => (
                   <div key={i} className={styles.storyItem}>
-                    <div className={styles.storyAvatar}><img src="https://www.figma.com/api/mcp/asset/c17521d5-55d8-4a3c-be60-2bc9c62f8edd" alt="" /></div>
+                    <div className={styles.storyAvatar}><img src="/images/avatar.png" alt="" /></div>
                     <p className={styles.storyText}>{text}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className={styles.bioHeroRight}>
-              <img src="https://www.figma.com/api/mcp/asset/4b959380-368a-4abc-9a0e-2f6975fdd015" alt="Dr. Gauri Rokkam" />
+              <img src="/images/dr-gauri-portrait.png" alt="Dr. Gauri Rokkam" />
             </div>
           </section>
 
@@ -54,7 +54,7 @@ export default function JourneyPage() {
             </div>
             <div className={styles.philosophyContent}>
               <div className={styles.philosophyImage}>
-                <img src="https://www.figma.com/api/mcp/asset/eb7ea2e8-8ad9-406c-98b4-38e108f46b3b" alt="Philosophy" />
+                <img src="/images/true-healing-diagram.png" alt="Philosophy" />
               </div>
               <p className={styles.philosophyBody}>&ldquo;True healing happens only when all three are in alignment. Most people don&rsquo;t struggle because they don&rsquo;t know what is healthy. They struggle because the mind resists change.&rdquo;</p>
             </div>
@@ -87,7 +87,7 @@ export default function JourneyPage() {
                 <div key={ri} className={styles.gardenerRow}>
                   {row.map((text) => (
                     <div key={text} className={styles.gardenerItem}>
-                      <div className={styles.gardenerAvatar}><img src="https://www.figma.com/api/mcp/asset/c17521d5-55d8-4a3c-be60-2bc9c62f8edd" alt="" /></div>
+                      <div className={styles.gardenerAvatar}><img src="/images/avatar.png" alt="" /></div>
                       <p className={styles.gardenerText}>{text}</p>
                     </div>
                   ))}
@@ -95,7 +95,7 @@ export default function JourneyPage() {
               ))}
               <div className={styles.gardenerRow}>
                 <div className={`${styles.gardenerItem} ${styles.single}`}>
-                  <div className={styles.gardenerAvatar}><img src="https://www.figma.com/api/mcp/asset/c17521d5-55d8-4a3c-be60-2bc9c62f8edd" alt="" /></div>
+                  <div className={styles.gardenerAvatar}><img src="/images/avatar.png" alt="" /></div>
                   <p className={styles.gardenerText}>It grows when it is understood, supported, and sustained.</p>
                 </div>
               </div>
@@ -109,18 +109,18 @@ export default function JourneyPage() {
               <Link href="/stories" className={styles.linkBtn}>Read More Testimonials →</Link>
             </div>
             <div className={styles.testimonialBox}>
-              <button className={styles.testimonialArrow}><img src="https://www.figma.com/api/mcp/asset/92183185-30c0-45ae-8923-a9d645f06df6" alt="←" /></button>
+              <button className={styles.testimonialArrow}><img src="/images/icons/arrow-left.svg" alt="←" /></button>
               <div className={styles.testimonialContent}>
                 <blockquote>&ldquo;Everything from healing, food, nutrition, and the mind is covered. Dr. Gauri also taught how to plan things, implement the learnings, and sustain a new lifestyle.&rdquo;</blockquote>
                 <div className={styles.testimonialAuthor}>
-                  <div className={styles.testimonialAvatar}><img src="https://www.figma.com/api/mcp/asset/3510d2e3-67d2-474c-8245-464d1945d7d5" alt="Krutika" /></div>
+                  <div className={styles.testimonialAvatar}><img src="/images/avatar.png" alt="Krutika" /></div>
                   <div>
                     <p className={styles.testimonialName}>Krutika Talwadel</p>
                     <p className={styles.testimonialRole}>Supply Chain Professional</p>
                   </div>
                 </div>
               </div>
-              <button className={`${styles.testimonialArrow} ${styles.testimonialArrowNext}`}><img src="https://www.figma.com/api/mcp/asset/92183185-30c0-45ae-8923-a9d645f06df6" alt="→" /></button>
+              <button className={`${styles.testimonialArrow} ${styles.testimonialArrowNext}`}><img src="/images/icons/arrow-left.svg" alt="→" /></button>
             </div>
           </section>
 

@@ -3,8 +3,8 @@ import styles from "./workshop.module.css";
 
 export const metadata = { title: "In-Person Workshop – Dr. Gauri Rokkam" };
 
-const imgSubtract  = "https://www.figma.com/api/mcp/asset/ed6b2a02-efd1-46e7-bfcc-f535d28aa852";
-const imgArrowLeft = "https://www.figma.com/api/mcp/asset/74e3d868-f335-4cd3-abd9-df5e485c8a08";
+const imgSubtract  = "/images/subtract.png";
+const imgArrowLeft = "/images/icons/arrow-left.svg";
 
 const HOW_IT_WORKS = [
   "Conducted in small, in-person groups",

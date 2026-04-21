@@ -86,19 +86,19 @@ export default function StoriesPage() {
             <p className={styles.storiesSubtitle}>Real people. Real struggles. Real healing.</p>
             <div className={styles.filtersBar}>
               <div className={styles.searchWrap}>
-                <img className={styles.searchIcon} src="https://www.figma.com/api/mcp/asset/4e698581-13f9-4dfd-aa96-92b3c1e9fa6a" alt="Search" />
+                <img className={styles.searchIcon} src="/images/icons/search.svg" alt="Search" />
                 <input type="text" className={styles.searchInput} placeholder="Search" />
               </div>
               <div className={styles.filterDropdowns}>
                 {tab === "testimonials" ? (
                   <>
-                    <button className={styles.filterBtn}><span className={styles.label}>Issue: </span><span className={styles.value}>All</span><img src="https://www.figma.com/api/mcp/asset/d35c1c3b-7eb5-478b-b5cf-0e877f9b08eb" alt="▾" /></button>
-                    <button className={styles.filterBtn}><span className={styles.label}>Programme: </span><span className={styles.value}>All</span><img src="https://www.figma.com/api/mcp/asset/d35c1c3b-7eb5-478b-b5cf-0e877f9b08eb" alt="▾" /></button>
+                    <button className={styles.filterBtn}><span className={styles.label}>Issue: </span><span className={styles.value}>All</span><img src="/images/icons/chevron-down.svg" alt="▾" /></button>
+                    <button className={styles.filterBtn}><span className={styles.label}>Programme: </span><span className={styles.value}>All</span><img src="/images/icons/chevron-down.svg" alt="▾" /></button>
                   </>
                 ) : (
                   <>
-                    <button className={styles.filterBtn}><span className={styles.label}>Topic: </span><span className={styles.value}>All</span><img src="https://www.figma.com/api/mcp/asset/d35c1c3b-7eb5-478b-b5cf-0e877f9b08eb" alt="▾" /></button>
-                    <button className={styles.filterBtn}><span className={styles.label}>Length: </span><span className={styles.value}>All</span><img src="https://www.figma.com/api/mcp/asset/d35c1c3b-7eb5-478b-b5cf-0e877f9b08eb" alt="▾" /></button>
+                    <button className={styles.filterBtn}><span className={styles.label}>Topic: </span><span className={styles.value}>All</span><img src="/images/icons/chevron-down.svg" alt="▾" /></button>
+                    <button className={styles.filterBtn}><span className={styles.label}>Length: </span><span className={styles.value}>All</span><img src="/images/icons/chevron-down.svg" alt="▾" /></button>
                   </>
                 )}
               </div>
@@ -111,13 +111,13 @@ export default function StoriesPage() {
               {/* Video cards */}
               <div className={styles.videoCardsRow}>
                 {[
-                  { id: "69e6d155-d527-4f9d-bf0d-ee3acbea8357", title: "A Simple Morning Routine for Better Digestion", meta: "Lifestyle • 9 min watch", hasPlay: true },
-                  { id: "4fb9406e-fb49-454c-9f3e-096a8419d8ec", title: "How Holistic Nutrition Changed Lives?", meta: "Nutrition • 12 min watch", hasPlay: false },
+                  { img: "/images/blog-protein.png", title: "A Simple Morning Routine for Better Digestion", meta: "Lifestyle • 9 min watch", hasPlay: true },
+                  { img: "/images/blog-coconut.png", title: "How Holistic Nutrition Changed Lives?", meta: "Nutrition • 12 min watch", hasPlay: false },
                 ].map((v) => (
-                  <div key={v.id} className={styles.videoCard}>
+                  <div key={v.title} className={styles.videoCard}>
                     <div className={styles.videoThumb}>
-                      <img src={`https://www.figma.com/api/mcp/asset/${v.id}`} alt={v.title} />
-                      {v.hasPlay && <div className={styles.playBtn}><img src="https://www.figma.com/api/mcp/asset/0aac235e-7f12-4f27-81e0-feb3f6ecd9bf" alt="Play" /></div>}
+                      <img src={v.img} alt={v.title} />
+                      {v.hasPlay && <div className={styles.playBtn}><img src="/images/icons/play.svg" alt="Play" /></div>}
                     </div>
                     <div className={styles.videoInfo}>
                       <p className={styles.videoTitle}>{v.title}</p>
@@ -133,10 +133,10 @@ export default function StoriesPage() {
               {/* Featured card */}
               <div className={styles.featuredCard}>
                 <div className={styles.ribbonWrap}><div className={styles.ribbonBar}><span className={styles.ribbonText}>In the spotlight</span></div></div>
-                <div className={styles.featuredPhoto}><img src="https://www.figma.com/api/mcp/asset/9be0428e-3310-483b-9014-201045ef1f63" alt="Neha" /></div>
+                <div className={styles.featuredPhoto}><img src="/images/dr-gauri-portrait.png" alt="Neha" /></div>
                 <div className={styles.featuredContent}>
                   <div className={styles.cardTopRow}>
-                    <div className={styles.cardAuthor}><span className={styles.featuredAuthorName}>Neha</span><img className={styles.ratingImg} src="https://www.figma.com/api/mcp/asset/05e86abd-4f04-4605-a628-4863e2e7b1d6" alt="5 stars" /></div>
+                    <div className={styles.cardAuthor}><span className={styles.featuredAuthorName}>Neha</span><img className={styles.ratingImg} src="/images/icons/stars.svg" alt="5 stars" /></div>
                     <div className={styles.badgeRow}><span className={`${styles.badge} ${styles.badgeSand}`}>E-Course</span><span className={`${styles.badge} ${styles.badgeRose}`}>Hands On Workshop</span></div>
                   </div>
                   <p className={styles.featuredTitle}>From chronic bloating to steady energy</p>
@@ -185,9 +185,9 @@ function TestimonialCard({ badges, ghost, time }: { badges: { label: string; cls
     <div className={styles.testimonialCard}>
       <div className={styles.cardTopRow}>
         <div className={styles.cardAuthor}>
-          <div className={styles.authorAvatar}><img src="https://www.figma.com/api/mcp/asset/53239d70-e18a-463c-8506-b452216660d8" alt="Prachi" /></div>
+          <div className={styles.authorAvatar}><img src="/images/avatar.png" alt="Prachi" /></div>
           <span className={styles.authorName}>Prachi</span>
-          <img className={styles.ratingImg} src="https://www.figma.com/api/mcp/asset/05e86abd-4f04-4605-a628-4863e2e7b1d6" alt="5 stars" />
+          <img className={styles.ratingImg} src="/images/icons/stars.svg" alt="5 stars" />
         </div>
         <div className={styles.badgeRow}>{badges.map((b) => <span key={b.label} className={`${styles.badge} ${styles[badgeClass[b.cls]]}`}>{b.label}</span>)}</div>
       </div>
