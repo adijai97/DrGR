@@ -36,11 +36,57 @@
 .gradGold   { background: linear-gradient(-37deg, #8ba87d 50%, #e2dba7 100%); }
 .cardHeader { display: flex; align-items: center; justify-content: space-between; width: 100%; position: relative; z-index: 1; }
 .cardHeaderTop { align-items: flex-start; }
-.cardTitle { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 24px; line-height: 1.2; color: #0d120b; }
-.cardArrow { width: 24px; height: 24px; flex-shrink: 0; }
-.cardArrow img { width: 100%; height: 100%; display: block; }
+.cardTitle {
+  font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic;
+  font-size: 24px; line-height: 1.2; color: #0d120b;
+  transition: color 0.3s ease;
+}
+/* CTA row (replaces plain arrow) */
+.cardCta { display: flex; align-items: center; gap: 6px; flex-shrink: 0; position: relative; z-index: 1; }
+.cardCtaLabel {
+  font-size: 11px; font-weight: 700; color: #fff; white-space: nowrap;
+  opacity: 0; transform: translateX(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.cardCtaArrowDefault { width: 24px; height: 24px; display: block; transition: opacity 0.2s ease; }
+.cardCtaArrowHover  { width: 24px; height: 24px; display: block; position: absolute; right: 0; opacity: 0; transition: opacity 0.2s ease; }
+
+/* Hover-revealed body */
+.hoverBody {
+  display: flex; gap: 48px; align-items: flex-start;
+  position: relative; z-index: 1;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.3s ease 0.05s, transform 0.3s ease 0.05s;
+}
+.hoverDesc { flex: 1; font-size: 16px; line-height: 1.6; color: #fff; min-width: 0; }
+.hoverStats { flex: 1; font-size: 16px; font-weight: 600; line-height: 1.8; color: #758e69; min-width: 0; }
+
+/* Compact (h170) revealed description */
+.hoverDescCompact {
+  font-size: 15px; line-height: 1.5; color: #fff;
+  position: relative; z-index: 1;
+  opacity: 0; transform: translateY(6px);
+  transition: opacity 0.3s ease 0.05s, transform 0.3s ease 0.05s;
+}
+
+/* Decor */
 .cardDecorL { position: absolute; height: 218px; left: -26px; bottom: 0; width: 540px; pointer-events: none; z-index: 0; }
 .cardDecorR { position: absolute; height: 218px; right: -26px; bottom: 0; width: 540px; pointer-events: none; z-index: 0; }
+
+/* ── Hover state ── */
+.svcCard:hover {
+  background: #181f14 !important;
+  transform: translateY(-5px) scale(1.005);
+  box-shadow: 0px 24px 48px -4px rgba(12,12,13,0.20), 0px 8px 16px -4px rgba(12,12,13,0.10);
+}
+.svcCard:hover .cardTitle { color: var(--accent, #bfe7ad); }
+.svcCard:hover .cardDecorL,
+.svcCard:hover .cardDecorR { opacity: 0; }
+.svcCard:hover .cardCtaLabel { opacity: 1; transform: translateX(0); }
+.svcCard:hover .cardCtaArrowDefault { opacity: 0; }
+.svcCard:hover .cardCtaArrowHover  { opacity: 1; }
+.svcCard:hover .hoverBody,
+.svcCard:hover .hoverDescCompact { opacity: 1; transform: translateY(0); }
 .desktopOnly { display: flex; }
 
 @media (max-width: 768px) {

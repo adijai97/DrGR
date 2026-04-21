@@ -26,6 +26,11 @@
   --white500: #919191;
   --white600: #747474;
   --shadow-card: 0px 16px 32px 0px rgba(12,12,13,0.10), 0px 4px 4px 0px rgba(12,12,13,0.05);
+  --header-height: 136px;
+}
+
+@media (max-width: 768px) {
+  :root { --header-height: 88px; }
 }
 
 body {
@@ -33,6 +38,13 @@ body {
   color: var(--neem800);
   background: #fff;
   overflow-x: hidden;
+}
+
+/* Pull each page's background (and its gradient) up behind the header,
+   so page-themed gradients extend to the very top of the viewport. */
+[class*="pageBg"] {
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: var(--header-height);
 }
 
 a { text-decoration: none; color: inherit; }
