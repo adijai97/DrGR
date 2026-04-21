@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./group-coaching.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 const imgSubtract  = "/images/subtract.png";
 const imgArrowLeft = "/images/icons/arrow-left.svg";
@@ -31,7 +32,7 @@ export default function GroupCoachingPage() {
         <div className={styles.inner}>
 
           {/* ── Hero ── */}
-          <div className={styles.hero}>
+          <FadeIn className={styles.hero}>
             <Link href="/services" className={styles.goBack}>
               <img src={imgArrowLeft} alt="" width={24} height={24} />
               <span>Go Back</span>
@@ -42,10 +43,10 @@ export default function GroupCoachingPage() {
               <span className={styles.tag}>Live + Interactive</span>
               <span className={styles.tag}>1 Month Cohort</span>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Two-col: description + image ── */}
-          <div className={styles.twoCol}>
+          <FadeIn className={styles.twoCol}>
             <div className={styles.descCol}>
               <h2 className={styles.descTitle}>Build habits that actually stick.</h2>
               <p className={styles.descBody}>
@@ -60,18 +61,18 @@ export default function GroupCoachingPage() {
             <div className={styles.imageCol}>
               <img src={imgSubtract} alt="" className={styles.subtractImg} />
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Olive banner ── */}
-          <div className={styles.oliveBanner}>
+          <FadeIn className={styles.oliveBanner}>
             <p>
               You learn in a group, stay accountable, and receive continuous support
               as you make changes.
             </p>
-          </div>
+          </FadeIn>
 
           {/* ── How It Works ── */}
-          <div className={styles.howSection}>
+          <FadeIn className={styles.howSection}>
             <p className={styles.sectionLabel}>HOW IT WORKS</p>
             <div className={styles.cardGrid}>
               {HOW_IT_WORKS.map((item) => (
@@ -81,24 +82,24 @@ export default function GroupCoachingPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Who Is This For ── */}
-          <div className={styles.whoSection}>
+          <FadeIn className={styles.whoSection}>
             <p className={styles.sectionLabel}>WHO IS THIS FOR?</p>
             <ul className={styles.whoList}>
               <li>You&apos;ve tried learning on your own but couldn&apos;t stay consistent</li>
               <li>You want guidance while building new habits</li>
               <li>You benefit from structure, accountability, and support</li>
             </ul>
-          </div>
+          </FadeIn>
 
           {/* ── Closing banner ── */}
-          <div className={styles.oliveBanner}>
+          <FadeIn className={styles.oliveBanner}>
             <p className={styles.closingQuote}>
               This is where knowledge turns into practice.
             </p>
-          </div>
+          </FadeIn>
 
         </div>
       </div>

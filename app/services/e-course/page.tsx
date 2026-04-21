@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./e-course.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 // Figma asset URLs
 const imgSubtract   = "/images/subtract.png";
@@ -59,7 +60,7 @@ export default function ECoursePage() {
         <div className={styles.inner}>
 
           {/* ── Hero ── */}
-          <div className={styles.hero}>
+          <FadeIn className={styles.hero}>
             <Link href="/services" className={styles.goBack}>
               <img src={imgArrowLeft} alt="" width={24} height={24} />
               <span>Go Back</span>
@@ -71,10 +72,10 @@ export default function ECoursePage() {
               <span className={styles.tag}>500+ Students</span>
               <span className={styles.tag}>Certificate Included</span>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Two-col: description + image ── */}
-          <div className={styles.twoCol}>
+          <FadeIn className={styles.twoCol}>
             <div className={styles.descCol}>
               <div className={styles.descTextGroup}>
                 <h2 className={styles.descTitle}>Learn to heal yourself.</h2>
@@ -88,18 +89,18 @@ export default function ECoursePage() {
             <div className={styles.imageCol}>
               <img src={imgSubtract} alt="" className={styles.subtractImg} />
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Sand banner ── */}
-          <div className={styles.sandBanner}>
+          <FadeIn className={styles.sandBanner}>
             <p>
               25+ hours of guided learning across food, lifestyle, and mindset —
               designed to help you build lasting health, at your own pace.
             </p>
-          </div>
+          </FadeIn>
 
           {/* ── What You'll Gain ── */}
-          <div className={styles.gainSection}>
+          <FadeIn className={styles.gainSection}>
             <p className={styles.sectionLabel}>WHAT YOU&apos;LL GAIN</p>
             <div className={styles.gainCard}>
               <div className={styles.gainItem}>
@@ -118,20 +119,20 @@ export default function ECoursePage() {
                 Confidence to take care of your own health
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Who Is This For ── */}
-          <div className={styles.whoSection}>
+          <FadeIn className={styles.whoSection}>
             <p className={styles.sectionLabel}>WHO IS THIS FOR?</p>
             <div className={styles.whoColumns}>
               <p className={styles.whoItem}>You prefer learning and applying on your own</p>
               <p className={styles.whoItem}>You want deep understanding before taking action</p>
               <p className={styles.whoItem}>You&apos;re disciplined enough to follow through independently</p>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Curriculum Details ── */}
-          <div className={styles.curriculumSection}>
+          <FadeIn className={styles.curriculumSection}>
             <p className={styles.sectionLabel}>CURRICULUM DETAILS</p>
             <div className={styles.accordion}>
               {MODULES.map((mod, idx) => {
@@ -172,10 +173,10 @@ export default function ECoursePage() {
                 );
               })}
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Testimonials ── */}
-          <div className={styles.testimonialSection}>
+          <FadeIn className={styles.testimonialSection}>
             <div className={styles.testimonialHeader}>
               <p className={styles.sectionLabel} style={{ textAlign: "left" }}>
                 TESTIMONIALS for MASTER YOUR HEALTH
@@ -208,7 +209,7 @@ export default function ECoursePage() {
                 <img src={imgVector} alt="" width={24} height={24} className={styles.arrowRight} />
               </button>
             </div>
-          </div>
+          </FadeIn>
 
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./speak.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 export const metadata = { title: "Invite Me to Speak – Dr. Gauri Rokkam" };
 
@@ -26,7 +27,7 @@ export default function SpeakPage() {
         <div className={styles.inner}>
 
           {/* ── Hero ── */}
-          <div className={styles.hero}>
+          <FadeIn className={styles.hero}>
             <Link href="/services" className={styles.goBack}>
               <img src={imgArrowLeft} alt="" width={24} height={24} />
               <span>Go Back</span>
@@ -37,10 +38,10 @@ export default function SpeakPage() {
               <span className={styles.tag}>Online or In-Person</span>
               <span className={styles.tag}>Custom Topics</span>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Two-col: description + image ── */}
-          <div className={styles.twoCol}>
+          <FadeIn className={styles.twoCol}>
             <div className={styles.descCol}>
               <div className={styles.descTextGroup}>
                 <h2 className={styles.descTitle}>Bring clarity to your community.</h2>
@@ -62,18 +63,18 @@ export default function SpeakPage() {
             <div className={styles.imageCol}>
               <img src={imgSubtract} alt="" className={styles.subtractImg} />
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Gold banner ── */}
-          <div className={styles.goldBanner}>
+          <FadeIn className={styles.goldBanner}>
             <p>
               Sessions can be tailored to specific topics, audiences, or health concerns
               and are suitable for both small groups and larger communities.
             </p>
-          </div>
+          </FadeIn>
 
           {/* ── What I Engage On — 2×2 card grid ── */}
-          <div className={styles.engageSection}>
+          <FadeIn className={styles.engageSection}>
             <p className={styles.sectionLabel}>WHAT I ENGAGE ON</p>
             <div className={styles.cardGrid}>
               {WHAT_I_ENGAGE_ON.map((item) => (
@@ -82,20 +83,20 @@ export default function SpeakPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── What I Engage On — bullet list ── */}
-          <div className={styles.engageListSection}>
+          <FadeIn className={styles.engageListSection}>
             <p className={styles.sectionLabel}>WHAT I ENGAGE ON</p>
             <ul className={styles.engageList}>
               {ENGAGE_LIST.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-          </div>
+          </FadeIn>
 
           {/* ── Closing CTA banner ── */}
-          <div className={styles.ctaBanner}>
+          <FadeIn className={styles.ctaBanner}>
             <p className={styles.ctaBannerText}>Interested in organising a session?</p>
             <a
               href="mailto:drgaurirokkam@gmail.com"
@@ -103,7 +104,7 @@ export default function SpeakPage() {
             >
               Get In Touch
             </a>
-          </div>
+          </FadeIn>
 
         </div>
       </div>

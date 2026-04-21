@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./stories.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 const BLOG_POSTS = [
   {
@@ -75,7 +76,7 @@ export default function StoriesPage() {
         <div className={styles.inner}>
 
           {/* Hero */}
-          <section className={styles.storiesHero}>
+          <FadeIn as="section" className={styles.storiesHero}>
             <h1 className={styles.storiesTitle}>Stories &amp; Wisdom</h1>
             <div className={styles.tabBarWrap}>
               <div className={styles.tabBar}>
@@ -103,13 +104,13 @@ export default function StoriesPage() {
                 )}
               </div>
             </div>
-          </section>
+          </FadeIn>
 
           {/* Testimonials panel */}
           {tab === "testimonials" && (
             <div className={styles.storiesContent}>
               {/* Video cards */}
-              <div className={styles.videoCardsRow}>
+              <FadeIn className={styles.videoCardsRow}>
                 {[
                   { img: "/images/blog-protein.png", title: "A Simple Morning Routine for Better Digestion", meta: "Lifestyle • 9 min watch", hasPlay: true },
                   { img: "/images/blog-coconut.png", title: "How Holistic Nutrition Changed Lives?", meta: "Nutrition • 12 min watch", hasPlay: false },
@@ -125,13 +126,13 @@ export default function StoriesPage() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </FadeIn>
 
               {/* Testimonial card 1 */}
-              <TestimonialCard badges={[{ label: "Heal Thy Self", cls: "teal" }]} />
+              <FadeIn><TestimonialCard badges={[{ label: "Heal Thy Self", cls: "teal" }]} /></FadeIn>
 
               {/* Featured card */}
-              <div className={styles.featuredCard}>
+              <FadeIn className={styles.featuredCard}>
                 <div className={styles.ribbonWrap}><div className={styles.ribbonBar}><span className={styles.ribbonText}>In the spotlight</span></div></div>
                 <div className={styles.featuredPhoto}><img src="/images/dr-gauri-portrait.png" alt="Neha" /></div>
                 <div className={styles.featuredContent}>
@@ -143,17 +144,17 @@ export default function StoriesPage() {
                   <p className={styles.featuredBody}>For months, I felt like I was guessing my way through meals. Every day ended with bloating, fatigue, and a foggy mind. Working with Dr. Gauri helped me understand my digestion, not just my symptoms. Within weeks, the bloating reduced, my energy became more consistent, and I finally felt like I was in control of my health.</p>
                   <div className={styles.tagRow}><span className={styles.tag}>Lifestyle Transformation</span><span className={styles.tag}>Disease Reversal</span></div>
                 </div>
-              </div>
+              </FadeIn>
 
               {/* More testimonial cards */}
-              <TestimonialCard badges={[{ label: "E-Course", cls: "sand" }, { label: "Hands On Workshop", cls: "rose" }]} />
-              <TestimonialCard badges={[{ label: "E-Course", cls: "sand" }, { label: "Hands On Workshop", cls: "rose" }]} ghost time="5 min ago" />
+              <FadeIn><TestimonialCard badges={[{ label: "E-Course", cls: "sand" }, { label: "Hands On Workshop", cls: "rose" }]} /></FadeIn>
+              <FadeIn><TestimonialCard badges={[{ label: "E-Course", cls: "sand" }, { label: "Hands On Workshop", cls: "rose" }]} ghost time="5 min ago" /></FadeIn>
             </div>
           )}
 
           {tab === "blogs" && (
             <div className={styles.storiesContent}>
-              <div className={styles.blogGrid}>
+              <FadeIn className={styles.blogGrid}>
                 {BLOG_POSTS.map((post) => (
                   <article key={post.id} className={styles.blogCard}>
                     <div className={`${styles.blogThumb} ${styles[post.thumbCls]}`}>
@@ -170,7 +171,7 @@ export default function StoriesPage() {
                     </div>
                   </article>
                 ))}
-              </div>
+              </FadeIn>
             </div>
           )}
         </div>

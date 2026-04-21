@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./heal-thy-self.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 // Figma asset URLs
 const imgSubtract = "/images/subtract.png";
@@ -68,7 +69,7 @@ export default function HealThySelfPage() {
         <div className={styles.inner}>
 
           {/* ── Hero ── */}
-          <div className={styles.hero}>
+          <FadeIn className={styles.hero}>
             <Link href="/services" className={styles.goBack}>
               <img src={imgArrowLeft} alt="" width={24} height={24} />
               <span>Go Back</span>
@@ -79,10 +80,10 @@ export default function HealThySelfPage() {
               <span className={styles.tag}>Self Paced</span>
               <span className={styles.tag}>5–6 Weeks</span>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Two-col: description + image ── */}
-          <div className={styles.twoCol}>
+          <FadeIn className={styles.twoCol}>
             <div className={styles.descCol}>
               <div className={styles.descTextGroup}>
                 <h2 className={styles.descTitle}>Heal the cause. Not just the symptom.</h2>
@@ -99,18 +100,18 @@ export default function HealThySelfPage() {
             <div className={styles.imageCol}>
               <img src={imgSubtract} alt="" className={styles.subtractImg} />
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Teal banner ── */}
-          <div className={styles.tealBanner}>
+          <FadeIn className={styles.tealBanner}>
             <p>
               Over 5–6 weeks, we make small, precise changes each week so your body adapts,
               your mind accepts, and the habits stay.
             </p>
-          </div>
+          </FadeIn>
 
           {/* ── What you can expect ── */}
-          <div className={styles.expectSection}>
+          <FadeIn className={styles.expectSection}>
             <p className={styles.sectionLabel}>WHAT YOU CAN EXPECT</p>
             <div className={styles.stepperCard}>
               <div className={styles.step}>
@@ -140,10 +141,10 @@ export default function HealThySelfPage() {
                 </ul>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Who is this for ── */}
-          <div className={styles.whoSection}>
+          <FadeIn className={styles.whoSection}>
             <p className={styles.sectionLabel}>WHO IS THIS FOR?</p>
             <div className={styles.whoColumns}>
               <div className={styles.whoCol}>
@@ -163,10 +164,10 @@ export default function HealThySelfPage() {
                 </ul>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Booking details ── */}
-          <div className={styles.bookingSection}>
+          <FadeIn className={styles.bookingSection}>
             <p className={styles.sectionLabel}>BOOKING DETAILS</p>
             <div className={styles.bookingCard}>
               <p className={styles.bookingText}>
@@ -243,10 +244,10 @@ export default function HealThySelfPage() {
 
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Testimonials ── */}
-          <div className={styles.testimonialSection}>
+          <FadeIn className={styles.testimonialSection}>
             <div className={styles.testimonialHeader}>
               <p className={styles.sectionLabel} style={{ textAlign: "left" }}>
                 TESTIMONIALS for HEAL THY SELF
@@ -279,7 +280,7 @@ export default function HealThySelfPage() {
                 <img src={imgVector} alt="" width={24} height={24} className={styles.arrowRight} />
               </button>
             </div>
-          </div>
+          </FadeIn>
 
         </div>
       </div>
