@@ -1,0 +1,58 @@
+.pageBg { position: relative; background: #fff; }
+.servicesGradient {
+  position: absolute; top: 0; left: 0; right: 0; height: 892px;
+  background: linear-gradient(to bottom, #e3f6db, #ffffff); z-index: 0; pointer-events: none;
+}
+.pageContent { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+.inner { max-width: 1440px; width: 100%; padding: 0 80px 160px; display: flex; flex-direction: column; gap: 100px; }
+.servicesHero { text-align: center; display: flex; flex-direction: column; gap: 24px; }
+.servicesHero h1 { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 40px; line-height: 1.1; color: var(--neem900); }
+.wordHealing { color: var(--terracotta); }
+.servicesHero p { font-size: 18px; line-height: 28px; color: var(--neem800); }
+.cardsGrid { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+.cardsRow { display: flex; gap: 24px; align-items: stretch; width: 100%; }
+.svcCard {
+  border-radius: 16px; padding: 48px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: 0px 16px 32px -4px rgba(12,12,13,0.10), 0px 4px 4px -4px rgba(12,12,13,0.05);
+  position: relative; overflow: hidden; cursor: pointer; text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+.svcCard:hover {
+  transform: translateY(-5px) scale(1.005);
+  box-shadow: 0px 24px 48px -4px rgba(12,12,13,0.14), 0px 8px 16px -4px rgba(12,12,13,0.08);
+}
+.h300 { height: 300px; }
+.h170 { height: 170px; }
+.wide   { flex: 2; }
+.narrow { flex: 1; }
+.equal  { flex: 1; }
+.gradTeal   { background: linear-gradient(-53deg, #8ba87d 50%, #a7e2e0 100%); }
+.gradSand   { background: linear-gradient(-53deg, #8ba87d 50%, #e2c7a7 100%); }
+.gradYellow { background: linear-gradient(-53deg, #8ba87d 50%, #e2e2a7 100%); }
+.gradRose   { background: linear-gradient(-53deg, #8ba87d 50%, #e2a7b6 100%); }
+.gradPurple { background: linear-gradient(-53deg, #8ba87d 50%, #caa7e2 100%); }
+.gradMint   { background: linear-gradient(-23deg, #8ba87d 50%, #a7e2c2 100%); }
+.gradGold   { background: linear-gradient(-37deg, #8ba87d 50%, #e2dba7 100%); }
+.cardHeader { display: flex; align-items: center; justify-content: space-between; width: 100%; position: relative; z-index: 1; }
+.cardHeaderTop { align-items: flex-start; }
+.cardTitle { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 24px; line-height: 1.2; color: #0d120b; }
+.cardArrow { width: 24px; height: 24px; flex-shrink: 0; }
+.cardArrow img { width: 100%; height: 100%; display: block; }
+.cardDecorL { position: absolute; height: 218px; left: -26px; bottom: 0; width: 540px; pointer-events: none; z-index: 0; }
+.cardDecorR { position: absolute; height: 218px; right: -26px; bottom: 0; width: 540px; pointer-events: none; z-index: 0; }
+.desktopOnly { display: flex; }
+
+@media (max-width: 768px) {
+  .servicesGradient { display: none; }
+  .inner { padding: 0; gap: 0; }
+  .servicesHero { background: linear-gradient(to bottom, #e3f6db, #ffffff); padding: 40px 24px 60px; gap: 24px; }
+  .servicesHero h1 { font-size: 32px; }
+  .servicesHero p { font-size: 16px; line-height: 24px; }
+  .cardsGrid { padding: 40px 20px 160px; gap: 32px; }
+  .cardsRow { flex-direction: column; gap: 32px; }
+  .desktopOnly { display: none !important; }
+  .svcCard { padding: 32px; height: 260px !important; }
+  .wide, .narrow, .equal { flex: unset; width: 100%; }
+  .cardTitle { font-size: 20px; }
+}

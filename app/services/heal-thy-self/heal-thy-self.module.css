@@ -1,0 +1,621 @@
+/* ─── Page shell ─────────────────────────────────────────────────── */
+.pageBg { position: relative; background: #fff; }
+
+.heroGradient {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 500px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 100%),
+    linear-gradient(90deg, #e3f6db 0%, #a7e2e0 50%, #e3f6db 100%);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pageContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner {
+  max-width: 1440px;
+  width: 100%;
+  padding: 64px 160px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ─── Hero ────────────────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+  padding-top: 48px; /* space so Go Back doesn't overlap title */
+}
+
+.goBack {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--neem700);
+  text-decoration: none;
+}
+.goBack:hover { opacity: 0.8; }
+
+.pageTitle {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--neem700);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.pageSubtitle {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--neem900);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.tags { display: flex; gap: 24px; align-items: center; }
+
+.tag {
+  background: #d9f2f1;
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--neem700);
+  letter-spacing: 0.5px;
+}
+
+/* ─── Two-col ─────────────────────────────────────────────────────── */
+.twoCol { display: flex; gap: 48px; align-items: stretch; width: 100%; }
+
+.descCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.descTextGroup { display: flex; flex-direction: column; gap: 16px; }
+
+.descTitle {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--neem700);
+  line-height: 1.35;
+}
+
+.descBody {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #181f14;
+}
+
+.bookBtn {
+  background: var(--neem700);
+  color: #fff;
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgba(10,13,18,0.05);
+  transition: opacity 0.15s;
+}
+.bookBtn:hover { opacity: 0.85; }
+
+.imageCol {
+  flex: 1;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 300px;
+  align-self: stretch;
+}
+
+.subtractImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Teal banner ─────────────────────────────────────────────────── */
+.tealBanner {
+  background: #d9f2f1;
+  padding: 48px;
+  border-radius: 16px;
+  width: 100%;
+  text-align: center;
+}
+.tealBanner p {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+  color: #339996;
+  line-height: 1.45;
+}
+
+/* ─── Section label (shared) ──────────────────────────────────────── */
+.sectionLabel {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #0d1426;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 100%;
+}
+
+/* ─── Stepper / What you can expect ──────────────────────────────── */
+.expectSection { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+
+.stepperCard {
+  border: 1px solid #d9f2f1;
+  border-radius: 16px;
+  padding: 48px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepWeek {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
+  color: #339996;
+  text-align: center;
+}
+
+.stepTitle {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0d1426;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.stepList {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #181f14;
+  line-height: 28px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stepDivider {
+  width: 1px;
+  background: #d9f2f1;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+/* ─── Who is this for ─────────────────────────────────────────────── */
+.whoSection {
+  background: #fff7ed;
+  padding: 48px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+}
+
+.whoColumns { display: flex; gap: 80px; align-items: flex-start; width: 100%; }
+
+.whoCol { flex: 1; display: flex; flex-direction: column; gap: 24px; }
+
+.whoColTitle {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0d1426;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.whoList {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #181f14;
+  line-height: 28px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.whoDivider {
+  width: 1px;
+  background: #d4c5b0;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+/* ─── Booking ──────────────────────────────────────────────────────── */
+.bookingSection { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+
+.bookingCard {
+  border: 1px solid #bfe7ad;
+  border-radius: 16px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+}
+
+.bookingText {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #181f14;
+}
+.bookingText strong { font-weight: 700; color: #0d1426; }
+
+.calendarSlotRow {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Calendar */
+.calendarWrap {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calendarTitle {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0d1426;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.calendar { display: flex; flex-direction: column; gap: 16px; }
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calMonthLabel {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+
+.calNav { display: flex; gap: 4px; }
+
+.calNavBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  color: #526549;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.calNavBtn:hover { background: #f0f0f0; }
+
+.calGrid { display: flex; gap: 8px; align-items: flex-start; }
+
+.calCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  min-width: 44px;
+}
+
+.calDayLabel {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.calDay {
+  width: 44px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  color: #000;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.calDay:hover { background: #e4f4df; transform: scale(1.12); }
+.calDay:active { transform: scale(0.9); transition-duration: 0.08s; }
+
+.calDayOther { color: #b4b4b4; cursor: default; }
+.calDayOther:hover { background: none; transform: none; }
+
+.calDaySelected {
+  background: #758e69 !important;
+  color: #fff !important;
+  transform: scale(1.12);
+}
+
+.calSlotDivider {
+  width: 1px;
+  background: #e2e2e2;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+/* Slots */
+.slotsWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.slotsContent { display: flex; flex-direction: column; gap: 20px; }
+
+.slotsTitle {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0d1426;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.slotsColumns { display: flex; gap: 24px; align-items: flex-start; }
+
+.slotCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: center;
+}
+
+.slotLabel {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.slot {
+  background: #fff;
+  border: 1px solid #b4b4b4;
+  border-radius: 8px;
+  padding: 9px 0;
+  width: 100%;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  color: #b4b4b4;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.18s ease;
+}
+.slot:hover { border-color: #758e69; color: #758e69; transform: scale(1.03); }
+.slot:active { transform: scale(0.96); transition-duration: 0.08s; }
+
+.slotSelected {
+  border-color: var(--neem700) !important;
+  color: var(--neem700) !important;
+  font-weight: 600;
+  background: #f3f8f0;
+}
+
+.bookSlotBtn {
+  background: var(--neem700);
+  color: #fff;
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0px 1px 2px rgba(10,13,18,0.05);
+  transition: opacity 0.15s;
+}
+.bookSlotBtn:hover { opacity: 0.85; }
+
+/* ─── Testimonials ────────────────────────────────────────────────── */
+.testimonialSection { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+
+.testimonialHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.readMoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--terracotta);
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.arrowRight { transform: rotate(180deg); }
+
+.testimonialCard {
+  border: 2px solid var(--terracotta200);
+  border-radius: 16px;
+  padding: 48px 40px;
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+}
+
+.arrowBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.arrowBtn:hover { opacity: 1; }
+
+.testimonialContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.quoteText {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.55;
+  color: #0d1426;
+}
+
+.testimonialAuthor {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.avatarWrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #d9b9bb;
+}
+.avatarImg { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.authorName {
+  font-family: var(--font-noto-serif), serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 24px;
+  color: #0d1426;
+}
+
+.authorRole {
+  font-family: var(--font-noto-sans), sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #181f14;
+}
+
+/* ─── Mobile ──────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .inner { padding: 64px 80px 100px; }
+}
+
+@media (max-width: 768px) {
+  .inner { padding: 32px 24px 80px; gap: 48px; }
+
+  .hero { padding-top: 40px; }
+  .goBack { font-size: 16px; }
+  .pageTitle { font-size: 32px; }
+
+  .twoCol { flex-direction: column; }
+  .imageCol { min-height: 220px; }
+
+  .tealBanner { padding: 32px 24px; }
+  .tealBanner p { font-size: 22px; }
+
+  .stepperCard { flex-direction: column; padding: 24px; }
+  .stepDivider { width: 100%; height: 1px; align-self: auto; }
+
+  .whoSection { padding: 24px; }
+  .whoColumns { flex-direction: column; gap: 32px; }
+  .whoDivider { width: 100%; height: 1px; align-self: auto; }
+
+  .bookingCard { padding: 24px; }
+  .calendarSlotRow { flex-direction: column; }
+  .calSlotDivider { width: 100%; height: 1px; align-self: auto; }
+  .slotsColumns { gap: 12px; }
+
+  .testimonialCard { flex-direction: column; gap: 24px; padding: 24px; }
+  .testimonialHeader { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .quoteText { font-size: 18px; }
+}
