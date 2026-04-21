@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./home.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 export const metadata = { title: "Dr. Gauri Rokkam – Holistic Health" };
 
@@ -11,7 +12,7 @@ export default function HomePage() {
         <div className={styles.contentSections}>
 
           {/* HERO */}
-          <section className={styles.hero}>
+          <FadeIn as="section" className={styles.hero}>
             <img className={styles.heroDecorLeft} src="/images/subtract.png" alt="" />
             <img className={styles.heroDecorRight} src="/images/subtract.png" alt="" />
             <div className={styles.heroInner}>
@@ -22,18 +23,18 @@ export default function HomePage() {
               </div>
               <a href="#" className={styles.btnTerracotta}>Work with Dr. Rokkam</a>
             </div>
-          </section>
+          </FadeIn>
 
           {/* HEALING QUOTE */}
-          <section className={styles.healingQuote}>
+          <FadeIn as="section" className={styles.healingQuote}>
             <div className={styles.portrait}>
               <img src="/images/true-healing-diagram.png" alt="True Healing" />
             </div>
             <p>True healing happens when food,<br />lifestyle &amp; mind work together</p>
-          </section>
+          </FadeIn>
 
           {/* BIO */}
-          <section className={styles.bioSection}>
+          <FadeIn as="section" className={styles.bioSection}>
             <div className={styles.bioText}>
               <h2>The guide to your healing journey</h2>
               <p className={styles.labelSmallCaps}>Dr. Gauri Rokkam</p>
@@ -52,10 +53,10 @@ export default function HomePage() {
             <div className={styles.bioImage}>
               <img src="/images/dr-gauri-portrait.png" alt="Dr. Gauri Rokkam" />
             </div>
-          </section>
+          </FadeIn>
 
           {/* SERVICES */}
-          <section className={styles.servicesSection}>
+          <FadeIn as="section" className={styles.servicesSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.labelSmallCaps}>WAYS YOU CAN BEGIN</span>
               <Link href="/services" className={styles.linkBtn}>
@@ -89,10 +90,10 @@ export default function HomePage() {
               </div>
             </div>
             <Link href="/services" className={`${styles.linkBtn} ${styles.servicesViewAll}`}>View All Services</Link>
-          </section>
+          </FadeIn>
 
           {/* TESTIMONIALS */}
-          <section className={styles.testimonialSection}>
+          <FadeIn as="section" className={styles.testimonialSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.labelSmallCaps} style={{ color: "var(--turmeric700)" }}>WHAT MY CLIENTS HAVE TO SAY</span>
               <Link href="/stories" className={styles.linkBtn}>
@@ -115,10 +116,10 @@ export default function HomePage() {
               <button className={`${styles.testimonialArrow} ${styles.testimonialArrowNext}`}><img src="/images/icons/arrow-right.svg" alt="→" /></button>
             </div>
             <Link href="/stories" className={`${styles.linkBtn} ${styles.testimonialLinkCenter}`}>View All Stories</Link>
-          </section>
+          </FadeIn>
 
           {/* BLOG */}
-          <section className={styles.blogSection}>
+          <FadeIn as="section" className={styles.blogSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.labelSmallCaps} style={{ color: "var(--turmeric700)" }}>MY WRITING</span>
               <a href="#" className={styles.linkBtn}>Read More Blogs <img src="/images/icons/arrow-right.svg" alt="→" /></a>
@@ -141,7 +142,7 @@ export default function HomePage() {
               ))}
             </div>
             <a href="#" className={`${styles.linkBtn} ${styles.blogViewAll}`}>Read More Blogs</a>
-          </section>
+          </FadeIn>
 
         </div>
       </div>

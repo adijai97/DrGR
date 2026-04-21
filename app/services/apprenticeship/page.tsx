@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./apprenticeship.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 export const metadata = { title: "The Apprenticeship – Dr. Gauri Rokkam" };
 
@@ -27,7 +28,7 @@ export default function ApprenticeshipPage() {
         <div className={styles.inner}>
 
           {/* ── Hero ── */}
-          <div className={styles.hero}>
+          <FadeIn className={styles.hero}>
             <Link href="/services" className={styles.goBack}>
               <img src={imgArrowLeft} alt="" width={24} height={24} />
               <span>Go Back</span>
@@ -38,10 +39,10 @@ export default function ApprenticeshipPage() {
               <span className={styles.tag}>20+ hours</span>
               <span className={styles.tag}>Advanced</span>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Two-col: description + image ── */}
-          <div className={styles.twoCol}>
+          <FadeIn className={styles.twoCol}>
             <div className={styles.descCol}>
               <div className={styles.descTextGroup}>
                 <h2 className={styles.descTitle}>Observe. Understand. Apply.</h2>
@@ -66,25 +67,25 @@ export default function ApprenticeshipPage() {
             <div className={styles.imageCol}>
               <img src={imgSubtract} alt="" className={styles.subtractImg} />
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Green banner ── */}
-          <div className={styles.greenBanner}>
+          <FadeIn className={styles.greenBanner}>
             <p>See the principles in practice across different individuals, conditions, and contexts.</p>
-          </div>
+          </FadeIn>
 
           {/* ── Who Is This For ── */}
-          <div className={styles.whoSection}>
+          <FadeIn className={styles.whoSection}>
             <p className={styles.sectionLabel}>WHO IS THIS FOR?</p>
             <ul className={styles.whoList}>
               {WHO_ITS_FOR.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-          </div>
+          </FadeIn>
 
           {/* ── How It Works 2×2 grid ── */}
-          <div className={styles.howSection}>
+          <FadeIn className={styles.howSection}>
             <p className={styles.sectionLabel}>HOW IT WORKS</p>
             <div className={styles.cardGrid}>
               {HOW_IT_WORKS.map((item) => (
@@ -93,19 +94,19 @@ export default function ApprenticeshipPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Before You Apply ── */}
-          <div className={styles.beforeSection}>
+          <FadeIn className={styles.beforeSection}>
             <p className={styles.sectionLabel}>BEFORE YOU APPLY!</p>
             <p className={styles.beforeBody}>
               This is an advanced program. You must complete the main course before
               joining the apprenticeship.
             </p>
-          </div>
+          </FadeIn>
 
           {/* ── Closing CTA banner ── */}
-          <div className={styles.ctaBanner}>
+          <FadeIn className={styles.ctaBanner}>
             <p className={styles.ctaBannerText}>Interested in going deeper?</p>
             <a
               href="https://whatsapp.com"
@@ -115,7 +116,7 @@ export default function ApprenticeshipPage() {
             >
               Join Whatsapp Channel
             </a>
-          </div>
+          </FadeIn>
 
         </div>
       </div>

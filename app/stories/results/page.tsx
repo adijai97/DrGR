@@ -3,6 +3,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useState, Suspense } from "react";
 import Link from "next/link";
 import styles from "./results.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 const imgArrowLeft   = "/images/icons/arrow-left.svg";
 const imgRating      = "/images/icons/stars.svg";
@@ -35,25 +36,25 @@ function ResultsContent() {
         <div className={styles.inner}>
 
           {/* ── Hero ── */}
-          <div className={styles.hero}>
+          <FadeIn className={styles.hero}>
             <Link href="/stories" className={styles.goBack}>
               <img src={imgArrowLeft} alt="" width={24} height={24} />
               <span>Go Back</span>
             </Link>
             <h1 className={styles.pageTitle}>Based on what you shared</h1>
-          </div>
+          </FadeIn>
 
           {/* ── People Like You ── */}
-          <section className={styles.section}>
+          <FadeIn as="section" className={styles.section}>
             <p className={styles.sectionLabel}>PEOPLE LIKE YOU</p>
             <div className={styles.twoColCards}>
               <TestimonialCard />
               <TestimonialCard />
             </div>
-          </section>
+          </FadeIn>
 
           {/* ── What Helped Them ── */}
-          <section className={styles.section}>
+          <FadeIn as="section" className={styles.section}>
             <p className={styles.sectionLabel}>WHAT HELPED THEM</p>
             <div className={styles.twoColCards}>
               <BlogCard
@@ -73,10 +74,10 @@ function ResultsContent() {
                 daysAgo="10 days ago"
               />
             </div>
-          </section>
+          </FadeIn>
 
           {/* ── Where to Start ── */}
-          <section className={styles.section}>
+          <FadeIn as="section" className={styles.section}>
             <p className={styles.sectionLabel}>WHERE TO START</p>
             <Link href="/services/heal-thy-self" className={styles.serviceCard}>
               <div className={styles.serviceCardTop}>
@@ -86,7 +87,7 @@ function ResultsContent() {
               <img src={imgSubtract} alt="" className={styles.subtractLeft} />
               <img src={imgSubtract} alt="" className={styles.subtractRight} />
             </Link>
-          </section>
+          </FadeIn>
 
         </div>
       </div>

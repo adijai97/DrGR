@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./journey.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 export const metadata = { title: "My Journey – Dr. Gauri Rokkam" };
 
@@ -11,7 +12,7 @@ export default function JourneyPage() {
         <div className={styles.inner}>
 
           {/* SECTION 1 — BIO HERO */}
-          <section className={styles.bioHero}>
+          <FadeIn as="section" className={styles.bioHero}>
             <div className={styles.bioHeroLeft}>
               <h1 className={styles.bioHeroHeading}>&ldquo;My journey didn&rsquo;t begin as a profession, it began at home.&rdquo;</h1>
               <div className={styles.storyItems}>
@@ -30,10 +31,10 @@ export default function JourneyPage() {
             <div className={styles.bioHeroRight}>
               <img src="/images/dr-gauri-portrait.png" alt="Dr. Gauri Rokkam" />
             </div>
-          </section>
+          </FadeIn>
 
           {/* SECTION 2 — HARMONY */}
-          <section className={styles.harmonyBox}>
+          <FadeIn as="section" className={styles.harmonyBox}>
             <div className={styles.harmonyLeft}>
               <p className={styles.harmonyText1}>&ldquo;Because the human body doesn&rsquo;t work in isolation.&rdquo;</p>
               <br /><br />
@@ -44,10 +45,10 @@ export default function JourneyPage() {
               <br />
               <p>This curiosity turned into a lifelong pursuit, to understand health not in parts, but as a whole.</p>
             </div>
-          </section>
+          </FadeIn>
 
           {/* SECTION 3 — PHILOSOPHY */}
-          <section className={styles.philosophySection}>
+          <FadeIn as="section" className={styles.philosophySection}>
             <div className={styles.philosophyHeader}>
               <span className={styles.sectionLabel}>MY PHILOSOPHY</span>
               <p className={styles.philosophySubheading}>&ldquo;Over the years, my work evolved into a simple but powerful framework&rdquo;</p>
@@ -58,10 +59,10 @@ export default function JourneyPage() {
               </div>
               <p className={styles.philosophyBody}>&ldquo;True healing happens only when all three are in alignment. Most people don&rsquo;t struggle because they don&rsquo;t know what is healthy. They struggle because the mind resists change.&rdquo;</p>
             </div>
-          </section>
+          </FadeIn>
 
           {/* SECTION 4 — APPROACH */}
-          <section className={styles.approachBox}>
+          <FadeIn as="section" className={styles.approachBox}>
             <p className={styles.approachLabel}>MY APPROACH</p>
             <div className={styles.approachCols}>
               <div className={styles.approachLeft}>
@@ -74,10 +75,10 @@ export default function JourneyPage() {
                 <p className={styles.approachBody}>&ldquo;Today, I meet each person exactly where they are—guiding them step by step, at a pace they can sustain.&rdquo;</p>
               </div>
             </div>
-          </section>
+          </FadeIn>
 
           {/* SECTION 5 — GARDENER */}
-          <section className={styles.gardenerSection}>
+          <FadeIn as="section" className={styles.gardenerSection}>
             <h2 className={styles.gardenerHeading}>&ldquo;I often describe my role like that of a gardener.&rdquo;</h2>
             <div className={styles.gardenerGrid}>
               {[
@@ -100,10 +101,10 @@ export default function JourneyPage() {
                 </div>
               </div>
             </div>
-          </section>
+          </FadeIn>
 
           {/* SECTION 6 — TESTIMONIALS */}
-          <section className={styles.testimonialSection}>
+          <FadeIn as="section" className={styles.testimonialSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionHeaderLabel}>TESTIMONIALS about Dr. Gauri</span>
               <Link href="/stories" className={styles.linkBtn}>Read More Testimonials →</Link>
@@ -122,7 +123,7 @@ export default function JourneyPage() {
               </div>
               <button className={`${styles.testimonialArrow} ${styles.testimonialArrowNext}`}><img src="/images/icons/arrow-left.svg" alt="→" /></button>
             </div>
-          </section>
+          </FadeIn>
 
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./workshop.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 export const metadata = { title: "In-Person Workshop – Dr. Gauri Rokkam" };
 
@@ -20,7 +21,7 @@ export default function WorkshopPage() {
         <div className={styles.inner}>
 
           {/* ── Hero ── */}
-          <div className={styles.hero}>
+          <FadeIn className={styles.hero}>
             <Link href="/services" className={styles.goBack}>
               <img src={imgArrowLeft} alt="" width={24} height={24} />
               <span>Go Back</span>
@@ -31,10 +32,10 @@ export default function WorkshopPage() {
               <span className={styles.tag}>Hands-On</span>
               <span className={styles.tag}>Small Group</span>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Two-col: description + image ── */}
-          <div className={styles.twoCol}>
+          <FadeIn className={styles.twoCol}>
             <div className={styles.descCol}>
               <div className={styles.descTextGroup}>
                 <h2 className={styles.descTitle}>Learn by doing, not just listening.</h2>
@@ -58,15 +59,15 @@ export default function WorkshopPage() {
             <div className={styles.imageCol}>
               <img src={imgSubtract} alt="" className={styles.subtractImg} />
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Rose banner ── */}
-          <div className={styles.roseBanner}>
+          <FadeIn className={styles.roseBanner}>
             <p>A space to slow down, learn, and experience the process firsthand.</p>
-          </div>
+          </FadeIn>
 
           {/* ── How It Works ── */}
-          <div className={styles.howSection}>
+          <FadeIn className={styles.howSection}>
             <p className={styles.sectionLabel}>HOW IT WORKS</p>
             <div className={styles.cardStack}>
               {HOW_IT_WORKS.map((item) => (
@@ -75,10 +76,10 @@ export default function WorkshopPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── When & Where ── */}
-          <div className={styles.whenSection}>
+          <FadeIn className={styles.whenSection}>
             <p className={styles.sectionLabel}>WHEN &amp; WHERE?</p>
             <div className={styles.whenText}>
               <p>
@@ -91,10 +92,10 @@ export default function WorkshopPage() {
                 Dates and locations are shared on the WhatsApp channel.
               </p>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Closing CTA banner ── */}
-          <div className={styles.ctaBanner}>
+          <FadeIn className={styles.ctaBanner}>
             <p className={styles.ctaBannerText}>Stay updated on upcoming workshops</p>
             <a
               href="https://whatsapp.com"
@@ -104,7 +105,7 @@ export default function WorkshopPage() {
             >
               Join Whatsapp Channel
             </a>
-          </div>
+          </FadeIn>
 
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./book.module.css";
+import FadeIn from "@/components/animations/FadeIn";
 
 export const metadata = { title: "Craft Your Wellness – Dr. Gauri Rokkam" };
 
@@ -27,7 +28,7 @@ export default function BookPage() {
         <div className={styles.inner}>
 
           {/* ── Hero ── */}
-          <div className={styles.hero}>
+          <FadeIn className={styles.hero}>
             <Link href="/services" className={styles.goBack}>
               <img src={imgArrowLeft} alt="" width={24} height={24} />
               <span>Go Back</span>
@@ -38,10 +39,10 @@ export default function BookPage() {
               <span className={styles.tag}>Self Guided</span>
               <span className={styles.tag}>Beginner Friendly</span>
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Two-col: description + image ── */}
-          <div className={styles.twoCol}>
+          <FadeIn className={styles.twoCol}>
             <div className={styles.descCol}>
               <div className={styles.descTextGroup}>
                 <h2 className={styles.descTitle}>Start simple. Build clarity.</h2>
@@ -65,18 +66,18 @@ export default function BookPage() {
             <div className={styles.imageCol}>
               <img src={imgSubtract} alt="" className={styles.subtractImg} />
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Purple banner ── */}
-          <div className={styles.purpleBanner}>
+          <FadeIn className={styles.purpleBanner}>
             <p>
               Helps you understand how your body works, why illness develops, and how
               small, consistent changes can restore balance.
             </p>
-          </div>
+          </FadeIn>
 
           {/* ── What It Covers ── */}
-          <div className={styles.coversSection}>
+          <FadeIn className={styles.coversSection}>
             <p className={styles.sectionLabel}>WHAT IT COVERS</p>
             <div className={styles.cardGrid}>
               {WHAT_IT_COVERS.map((item) => (
@@ -85,25 +86,25 @@ export default function BookPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </FadeIn>
 
           {/* ── Who Is This For ── */}
-          <div className={styles.whoSection}>
+          <FadeIn className={styles.whoSection}>
             <p className={styles.sectionLabel}>WHO IS THIS FOR?</p>
             <ul className={styles.whoList}>
               {WHO_ITS_FOR.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-          </div>
+          </FadeIn>
 
           {/* ── Closing banner ── */}
-          <div className={styles.purpleBanner}>
+          <FadeIn className={styles.purpleBanner}>
             <p>
               Healing doesn&apos;t come from doing more. It comes from understanding better
               and doing the right things consistently.
             </p>
-          </div>
+          </FadeIn>
 
         </div>
       </div>
