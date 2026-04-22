@@ -1,3 +1,17 @@
+/* Tailwind v4 — utilities only (no preflight so existing CSS Modules are unaffected) */
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+/* Aurora animation — consumed by animate-aurora utility class */
+@keyframes aurora {
+  from { background-position: 50% 50%, 50% 50%; }
+  to   { background-position: 350% 50%, 350% 50%; }
+}
+
+@theme {
+  --animate-aurora: aurora 60s linear infinite;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -26,7 +40,7 @@
   --white500: #919191;
   --white600: #747474;
   --shadow-card: 0px 16px 32px 0px rgba(12,12,13,0.10), 0px 4px 4px 0px rgba(12,12,13,0.05);
-  --header-height: 136px;
+  --header-height: 176px;
 }
 
 @media (max-width: 768px) {

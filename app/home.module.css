@@ -10,18 +10,18 @@
 }
 
 .hero {
-  background: var(--peach-bg); border-radius: 16px;
+  background: #C9724A; border-radius: 16px;
   padding: 120px 103px; width: 100%;
   display: flex; flex-direction: column; align-items: center; gap: 10px;
   position: relative; overflow: hidden;
 }
-.heroDecorLeft { position: absolute; width: 664px; height: 268px; left: -57px; top: 337px; pointer-events: none; }
-.heroDecorRight { position: absolute; width: 664px; height: 268px; right: -57px; top: 345px; transform: scaleX(-1); pointer-events: none; }
-.heroInner { display: flex; flex-direction: column; gap: 48px; align-items: center; width: 813px; max-width: 100%; position: relative; z-index: 1; }
-.heroDeco { position: absolute; width: 83px; top: -94px; left: calc(50% + 80px); pointer-events: none; }
+.heroDecorLeft { position: absolute; width: 664px; height: 268px; left: -57px; top: 337px; pointer-events: none; z-index: 1; }
+.heroDecorRight { position: absolute; width: 664px; height: 268px; right: -57px; top: 345px; transform: scaleX(-1); pointer-events: none; z-index: 1; }
+.heroInner { display: flex; flex-direction: column; gap: 48px; align-items: center; width: 813px; max-width: 100%; position: relative; z-index: 2; }
+.heroDeco { position: absolute; width: 83px; top: -94px; left: calc(50% + 80px); pointer-events: none; z-index: 2; }
 .heroText { display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center; width: 100%; }
-.heroText h1 { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 40px; line-height: 1; color: var(--neem900); text-align: center; }
-.heroText p { font-size: 18px; line-height: 28px; color: var(--neem800); text-align: center; }
+.heroText h1 { font-family: var(--font-noto-serif), serif; font-weight: 600; font-style: italic; font-size: 40px; line-height: 1; color: #fff5e8; text-align: center; }
+.heroText p { font-size: 18px; line-height: 28px; color: rgba(255,245,220,0.85); text-align: center; }
 
 .btnTerracotta {
   background: var(--terracotta); border-radius: 8px; padding: 12px 20px;

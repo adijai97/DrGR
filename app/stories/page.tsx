@@ -84,7 +84,11 @@ export default function StoriesPage() {
                 <div className={`${styles.tabItem} ${tab === "blogs" ? styles.active : ""}`} onClick={() => setTab("blogs")}>Blogs</div>
               </div>
             </div>
-            <p className={styles.storiesSubtitle}>Real people. Real struggles. Real healing.</p>
+            <p className={styles.storiesSubtitle}>
+              {tab === "testimonials"
+                ? "Real people. Real struggles. Real healing."
+                : "Understand what your body is trying to tell you."}
+            </p>
             <div className={styles.filtersBar}>
               <div className={styles.searchWrap}>
                 <img className={styles.searchIcon} src="/images/icons/search.svg" alt="Search" />
@@ -111,21 +115,16 @@ export default function StoriesPage() {
             <div className={styles.storiesContent}>
               {/* Video cards */}
               <FadeIn className={styles.videoCardsRow}>
-                {[
-                  { img: "/images/blog-protein.png", title: "A Simple Morning Routine for Better Digestion", meta: "Lifestyle • 9 min watch", hasPlay: true },
-                  { img: "/images/blog-coconut.png", title: "How Holistic Nutrition Changed Lives?", meta: "Nutrition • 12 min watch", hasPlay: false },
-                ].map((v) => (
-                  <div key={v.title} className={styles.videoCard}>
-                    <div className={styles.videoThumb}>
-                      <img src={v.img} alt={v.title} />
-                      {v.hasPlay && <div className={styles.playBtn}><img src="/images/icons/play.svg" alt="Play" /></div>}
-                    </div>
-                    <div className={styles.videoInfo}>
-                      <p className={styles.videoTitle}>{v.title}</p>
-                      <p className={styles.videoMeta}>{v.meta}</p>
-                    </div>
-                  </div>
-                ))}
+                <VideoCard
+                  youtubeId="iS_UoDMzJ30"
+                  title="A Simple Morning Routine for Better Digestion"
+                  meta="Lifestyle • 9 min watch"
+                />
+                <VideoCard
+                  youtubeId="J1ompYdSdu4"
+                  title="How Holistic Nutrition Changed Lives?"
+                  meta="Nutrition • 12 min watch"
+                />
               </FadeIn>
 
               {/* Testimonial card 1 */}
@@ -175,6 +174,38 @@ export default function StoriesPage() {
             </div>
           )}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function VideoCard({ youtubeId, title, meta }: { youtubeId: string; title: string; meta: string }) {
+  const [playing, setPlaying] = useState(false);
+  const thumb = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+
+  return (
+    <div className={styles.videoCard}>
+      <div className={styles.videoThumb}>
+        {playing ? (
+          <iframe
+            className={styles.videoIframe}
+            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
+            title={title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <>
+            <img src={thumb} alt={title} />
+            <button className={styles.playBtn} onClick={() => setPlaying(true)} aria-label={`Play ${title}`}>
+              <img src="/images/icons/play.svg" alt="Play" width={20} height={20} />
+            </button>
+          </>
+        )}
+      </div>
+      <div className={styles.videoInfo}>
+        <p className={styles.videoTitle}>{title}</p>
+        <p className={styles.videoMeta}>{meta}</p>
       </div>
     </div>
   );

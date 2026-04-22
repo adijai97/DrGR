@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./home.module.css";
 import FadeIn from "@/components/animations/FadeIn";
+import { AuroraOverlay } from "@/components/ui/aurora-background";
 
 export const metadata = { title: "Dr. Gauri Rokkam – Holistic Health" };
 
@@ -13,6 +14,7 @@ export default function HomePage() {
 
           {/* HERO */}
           <FadeIn as="section" className={styles.hero}>
+            <AuroraOverlay />
             <img className={styles.heroDecorLeft} src="/images/subtract.png" alt="" />
             <img className={styles.heroDecorRight} src="/images/subtract.png" alt="" />
             <div className={styles.heroInner}>
