@@ -78,7 +78,7 @@ export default function Footer() {
         <div className={styles.footerDivider}></div>
         <div className={styles.footerBottom}>
           <div className={styles.footerLogo}>
-            <img src="/Logo 300x300 (1) 1.png" alt="Dr. Gauri Rokkam" style={{ height: 58 }} />
+            <img src="/Logo-vectorized.png" alt="Dr. Gauri Rokkam" style={{ height: 58 }} />
           </div>
           <p className={styles.footerCopy}>© 2025 Dr. Gauri Rokkam. All rights reserved.</p>
         </div>

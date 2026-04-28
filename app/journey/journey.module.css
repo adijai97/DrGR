@@ -50,7 +50,7 @@
 .testimonialSection { display: flex; flex-direction: column; gap: 24px; width: 100%; }
 .sectionHeader { display: flex; align-items: center; justify-content: space-between; }
 .sectionHeaderLabel { font-family: var(--font-noto-serif), serif; font-style: italic; font-size: 20px; line-height: 1; letter-spacing: 3px; color: var(--neem900); }
-.linkBtn { display: flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 8px; font-size: 18px; font-weight: 700; color: var(--terracotta); text-decoration: none; }
+.linkBtn { display: flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 8px; font-size: 16px; font-weight: 700; color: var(--terracotta); text-decoration: none; }
 .testimonialBox { border: 2px solid var(--terracotta200); border-radius: 16px; padding: 48px 40px; display: flex; gap: 64px; align-items: center; }
 .testimonialArrow { width: 24px; height: 24px; flex-shrink: 0; cursor: pointer; background: none; border: none; padding: 0; }
 .testimonialArrow img { width: 100%; height: 100%; }

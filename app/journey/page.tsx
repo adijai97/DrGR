@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./journey.module.css";
 import FadeIn from "@/components/animations/FadeIn";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata = { title: "My Journey – Dr. Gauri Rokkam" };
 
@@ -109,20 +110,7 @@ export default function JourneyPage() {
               <span className={styles.sectionHeaderLabel}>TESTIMONIALS about Dr. Gauri</span>
               <Link href="/stories" className={styles.linkBtn}>Read More Testimonials →</Link>
             </div>
-            <div className={styles.testimonialBox}>
-              <button className={styles.testimonialArrow}><img src="/images/icons/arrow-left.svg" alt="←" /></button>
-              <div className={styles.testimonialContent}>
-                <blockquote>&ldquo;Everything from healing, food, nutrition, and the mind is covered. Dr. Gauri also taught how to plan things, implement the learnings, and sustain a new lifestyle.&rdquo;</blockquote>
-                <div className={styles.testimonialAuthor}>
-                  <div className={styles.testimonialAvatar}><img src="/images/avatar.png" alt="Krutika" /></div>
-                  <div>
-                    <p className={styles.testimonialName}>Krutika Talwadel</p>
-                    <p className={styles.testimonialRole}>Supply Chain Professional</p>
-                  </div>
-                </div>
-              </div>
-              <button className={`${styles.testimonialArrow} ${styles.testimonialArrowNext}`}><img src="/images/icons/arrow-left.svg" alt="→" /></button>
-            </div>
+            <TestimonialCarousel />
           </FadeIn>
 
         </div>
