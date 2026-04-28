@@ -1,6 +1,9 @@
 import Link from "next/link";
 import styles from "./home.module.css";
 import FadeIn from "@/components/animations/FadeIn";
+import { AuroraOverlay } from "@/components/ui/aurora-background";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import CredentialsModal from "@/components/CredentialsModal";
 
 export const metadata = { title: "Dr. Gauri Rokkam – Holistic Health" };
 
@@ -13,6 +16,7 @@ export default function HomePage() {
 
           {/* HERO */}
           <FadeIn as="section" className={styles.hero}>
+            <AuroraOverlay />
             <img className={styles.heroDecorLeft} src="/images/subtract.png" alt="" />
             <img className={styles.heroDecorRight} src="/images/subtract.png" alt="" />
             <div className={styles.heroInner}>
@@ -47,7 +51,7 @@ export default function HomePage() {
               <p className={styles.bioBody}>Like a gardener preparing the soil, my role is to create the right conditions for health to grow.</p>
               <div className={styles.bioCta}>
                 <Link href="/journey" className={styles.btnTerracotta}>My Journey</Link>
-                <button className={styles.btnOutlineLg}>My Credentials</button>
+                <CredentialsModal triggerClassName={styles.btnOutlineLg} />
               </div>
             </div>
             <div className={styles.bioImage}>
@@ -98,23 +102,10 @@ export default function HomePage() {
               <span className={styles.labelSmallCaps} style={{ color: "var(--turmeric700)" }}>WHAT MY CLIENTS HAVE TO SAY</span>
               <Link href="/stories" className={styles.linkBtn}>
                 Read More Stories
-                <img src="/images/icons/arrow-right.svg" alt="→" />
+                <img src="/images/icons/arrow-readmore.svg" alt="→" />
               </Link>
             </div>
-            <div className={styles.testimonialBox}>
-              <button className={styles.testimonialArrow}><img src="/images/icons/arrow-left.svg" alt="←" /></button>
-              <div className={styles.testimonialContent}>
-                <blockquote>"Everything from healing, food, nutrition, and the mind is covered. Dr. Gauri also taught how to plan things, implement the learnings, and sustain a new lifestyle."</blockquote>
-                <div className={styles.testimonialAuthor}>
-                  <div className={styles.testimonialAvatar}><img src="/images/avatar.png" alt="Krutika" /></div>
-                  <div>
-                    <p className={styles.testimonialName}>Krutika Talwadel</p>
-                    <p className={styles.testimonialRole}>Supply Chain Professional</p>
-                  </div>
-                </div>
-              </div>
-              <button className={`${styles.testimonialArrow} ${styles.testimonialArrowNext}`}><img src="/images/icons/arrow-right.svg" alt="→" /></button>
-            </div>
+            <TestimonialCarousel />
             <Link href="/stories" className={`${styles.linkBtn} ${styles.testimonialLinkCenter}`}>View All Stories</Link>
           </FadeIn>
 
@@ -122,23 +113,28 @@ export default function HomePage() {
           <FadeIn as="section" className={styles.blogSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.labelSmallCaps} style={{ color: "var(--turmeric700)" }}>MY WRITING</span>
-              <a href="#" className={styles.linkBtn}>Read More Blogs <img src="/images/icons/arrow-right.svg" alt="→" /></a>
+              <a href="#" className={styles.linkBtn}>Read More Blogs <img src="/images/icons/arrow-readmore.svg" alt="→" /></a>
             </div>
-            <div className={styles.blogCardsRow}>
+            <div className={styles.blogGrid}>
               {[
-                { img: "/images/blog-protein.png", title: "Different Health Practices", by: "Byline here", body: "Let's begin with the Food Our food should be wholesome and plant-based to impart health. Why? Unrefined or least refined plant foods...." },
-                { img: "/images/blog-protein.png", title: "Protein", by: "Byline here", body: "Protein is an essential nutrient with vital functions; without it, life simply cannot thrive. Its main functions are to support growth ......" },
-                { img: "/images/blog-coconut.png", title: "Coconut Was Innocent", by: "My Journey from Doubt to Discovery", body: "Protein is an essential nutrient with vital functions; without it, life simply cannot thrive. Its main functions are to support growth ......" },
-              ].map((c) => (
-                <div key={c.title} className={styles.blogCard}>
-                  <div className={styles.blogCardImg}><img src={c.img} alt={c.title} /></div>
-                  <div className={styles.blogCardMeta}>
-                    <p className={styles.blogCardTitle}>{c.title}</p>
-                    <p className={styles.blogCardByline}>{c.by}</p>
+                { id: 1, category: "Nutrition", title: "Why Most Diets Fail (And What to Do Instead)", excerpt: "The problem isn't willpower. It's the approach. Here's why most modern diets are designed to keep you stuck — and what lasting change actually looks like.", readTime: "6 min read", date: "Mar 2025", thumbCls: "blogThumbTeal", pillCls: "pillTeal" },
+                { id: 2, category: "Gut Health", title: "The Gut-Brain Connection: What Your Digestion Is Telling You", excerpt: "Bloating, brain fog, anxiety — these often share the same root. Understanding the gut-brain axis changes how you think about healing.", readTime: "8 min read", date: "Feb 2025", thumbCls: "blogThumbSand", pillCls: "pillSand" },
+                { id: 3, category: "Disease", title: "Understanding Inflammation: The Root of Most Modern Illness", excerpt: "Chronic low-grade inflammation is behind diabetes, heart disease, and autoimmune conditions. Learn what drives it and how food can reverse it.", readTime: "5 min read", date: "Feb 2025", thumbCls: "blogThumbRose", pillCls: "pillRose" },
+              ].map((post) => (
+                <article key={post.id} className={styles.blogCard}>
+                  <div className={`${styles.blogThumb} ${styles[post.thumbCls]}`}>
+                    <span className={`${styles.blogCategoryPill} ${styles[post.pillCls]}`}>{post.category}</span>
                   </div>
-                  <p className={styles.blogCardBody}>{c.body}</p>
-                  <p className={styles.blogReadMore}>Read More</p>
-                </div>
+                  <div className={styles.blogCardBody}>
+                    <h3 className={styles.blogTitle}>{post.title}</h3>
+                    <p className={styles.blogExcerpt}>{post.excerpt}</p>
+                    <div className={styles.blogMeta}>
+                      <span className={styles.blogReadTime}>{post.readTime}</span>
+                      <span className={styles.blogDot} />
+                      <span className={styles.blogDate}>{post.date}</span>
+                    </div>
+                  </div>
+                </article>
               ))}
             </div>
             <a href="#" className={`${styles.linkBtn} ${styles.blogViewAll}`}>Read More Blogs</a>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import styles from "./stories.module.css";
 import FadeIn from "@/components/animations/FadeIn";
 
@@ -66,6 +67,103 @@ const BLOG_POSTS = [
   },
 ];
 
+const TESTIMONIALS = [
+  {
+    name: "Prachi Khandelwal",
+    role: "Supply Chain Professional",
+    title: "Overwhelming change in my body and diet",
+    body: "Everything from healing, food, nutrition, and the mind is covered. Dr. Gauri also taught how to plan things, implement the learnings, and sustain a new lifestyle.",
+    portrait: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "Heal Thy Self", cls: "teal" }],
+    tags: ["Disease Reversal", "Lifestyle Transformation"],
+  },
+  {
+    name: "Rohan Mehta",
+    role: "Investment Banker",
+    title: "Finally off my acidity medication",
+    body: "I had been living on antacids for years. Within six weeks of working with Dr. Gauri, the acidity was gone. Not managed — gone. I understand now what my body had been signalling the whole time.",
+    portrait: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "E-Course", cls: "sand" }, { label: "Hands On Workshop", cls: "rose" }],
+    tags: ["Disease Reversal", "Gut Health"],
+    time: "5 min ago",
+  },
+  {
+    name: "Ananya Iyer",
+    role: "Architect",
+    title: "My energy came back, and my sleep with it",
+    body: "I used to wake up tired no matter how long I slept. The programme shifted how I eat and how I structure my evenings. Sleep is deep now, and mornings feel like mornings again.",
+    portrait: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "Heal Thy Self", cls: "teal" }],
+    tags: ["Lifestyle Transformation", "Sleep"],
+  },
+  {
+    name: "Kabir Singh",
+    role: "Marketing Manager",
+    title: "Lost 11 kg without counting a single calorie",
+    body: "The focus was never on weight. It was on healing. The weight loss came as a side effect of eating what my body actually needed. That's what makes it sustainable.",
+    portrait: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "E-Course", cls: "sand" }],
+    tags: ["Weight Management", "Lifestyle Transformation"],
+  },
+  {
+    name: "Meera Nair",
+    role: "Yoga Instructor",
+    title: "PCOS symptoms easing for the first time in years",
+    body: "I'd tried every hormonal fix and felt stuck. Dr. Gauri's approach worked with my cycle, not against it. My periods are regular, the bloating is down, and I feel calmer overall.",
+    portrait: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "Heal Thy Self", cls: "teal" }, { label: "E-Course", cls: "sand" }],
+    tags: ["Women's Health", "Disease Reversal"],
+    time: "2 hours ago",
+  },
+  {
+    name: "Arjun Deshpande",
+    role: "Product Designer",
+    title: "The brain fog lifted and I got my focus back",
+    body: "As someone who works long hours, the mental clarity has been the biggest gift. I can think through complex problems without that heavy, slow feeling I used to carry every afternoon.",
+    portrait: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "E-Course", cls: "sand" }],
+    tags: ["Mental Clarity", "Gut Health"],
+  },
+  {
+    name: "Divya Patel",
+    role: "Homemaker",
+    title: "My whole family eats differently now",
+    body: "What started as my programme turned into a household change. My kids are curious about food, my husband has dropped his sugar habit, and mealtimes feel intentional again.",
+    portrait: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "Hands On Workshop", cls: "rose" }],
+    tags: ["Family Health", "Lifestyle Transformation"],
+    time: "1 day ago",
+  },
+  {
+    name: "Siddharth Rao",
+    role: "Civil Engineer",
+    title: "Blood pressure under control without increasing meds",
+    body: "My cardiologist was sceptical. Three months later, he's the one asking what I'm doing differently. Small, precise changes to food and stress made all the difference.",
+    portrait: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "Heal Thy Self", cls: "teal" }],
+    tags: ["Disease Reversal", "Heart Health"],
+  },
+  {
+    name: "Nisha Agarwal",
+    role: "Schoolteacher",
+    title: "From constant bloating to a calm gut",
+    body: "I used to dread eating out. Now I can enjoy meals without the aftermath. Understanding my triggers — and what actually heals — completely changed my relationship with food.",
+    portrait: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "E-Course", cls: "sand" }, { label: "Hands On Workshop", cls: "rose" }],
+    tags: ["Gut Health", "Disease Reversal"],
+    time: "3 days ago",
+  },
+  {
+    name: "Vikram Joshi",
+    role: "Operations Lead",
+    title: "Reversed pre-diabetes in four months",
+    body: "The numbers didn't lie. HbA1c dropped from 6.3 to 5.4. But what mattered more was how different I felt in my own body. Lighter, clearer, and genuinely well.",
+    portrait: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80",
+    badges: [{ label: "Heal Thy Self", cls: "teal" }, { label: "E-Course", cls: "sand" }],
+    tags: ["Disease Reversal", "Diabetes"],
+  },
+];
+
 export default function StoriesPage() {
   const [tab, setTab] = useState<"testimonials" | "blogs">("testimonials");
 
@@ -84,7 +182,11 @@ export default function StoriesPage() {
                 <div className={`${styles.tabItem} ${tab === "blogs" ? styles.active : ""}`} onClick={() => setTab("blogs")}>Blogs</div>
               </div>
             </div>
-            <p className={styles.storiesSubtitle}>Real people. Real struggles. Real healing.</p>
+            <p className={styles.storiesSubtitle}>
+              {tab === "testimonials"
+                ? "Real people. Real struggles. Real healing."
+                : "Understand what your body is trying to tell you."}
+            </p>
             <div className={styles.filtersBar}>
               <div className={styles.searchWrap}>
                 <img className={styles.searchIcon} src="/images/icons/search.svg" alt="Search" />
@@ -106,54 +208,81 @@ export default function StoriesPage() {
             </div>
           </FadeIn>
 
-          {/* Testimonials panel */}
+          {/* Animated tab panels */}
+          <AnimatePresence mode="wait" initial={false}>
           {tab === "testimonials" && (
-            <div className={styles.storiesContent}>
+            <motion.div
+              key="testimonials"
+              className={styles.storiesContent}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            >
               {/* Video cards */}
               <FadeIn className={styles.videoCardsRow}>
-                {[
-                  { img: "/images/blog-protein.png", title: "A Simple Morning Routine for Better Digestion", meta: "Lifestyle • 9 min watch", hasPlay: true },
-                  { img: "/images/blog-coconut.png", title: "How Holistic Nutrition Changed Lives?", meta: "Nutrition • 12 min watch", hasPlay: false },
-                ].map((v) => (
-                  <div key={v.title} className={styles.videoCard}>
-                    <div className={styles.videoThumb}>
-                      <img src={v.img} alt={v.title} />
-                      {v.hasPlay && <div className={styles.playBtn}><img src="/images/icons/play.svg" alt="Play" /></div>}
-                    </div>
-                    <div className={styles.videoInfo}>
-                      <p className={styles.videoTitle}>{v.title}</p>
-                      <p className={styles.videoMeta}>{v.meta}</p>
-                    </div>
-                  </div>
-                ))}
+                <VideoCard
+                  youtubeId="iS_UoDMzJ30"
+                  title="A Simple Morning Routine for Better Digestion"
+                  meta="Lifestyle • 9 min watch"
+                />
+                <VideoCard
+                  youtubeId="J1ompYdSdu4"
+                  title="How Holistic Nutrition Changed Lives?"
+                  meta="Nutrition • 12 min watch"
+                />
               </FadeIn>
-
-              {/* Testimonial card 1 */}
-              <FadeIn><TestimonialCard badges={[{ label: "Heal Thy Self", cls: "teal" }]} /></FadeIn>
 
               {/* Featured card */}
               <FadeIn className={styles.featuredCard}>
                 <div className={styles.ribbonWrap}><div className={styles.ribbonBar}><span className={styles.ribbonText}>In the spotlight</span></div></div>
-                <div className={styles.featuredPhoto}><img src="/images/dr-gauri-portrait.png" alt="Neha" /></div>
+                <div className={styles.featuredPhoto}><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Neha" /></div>
                 <div className={styles.featuredContent}>
                   <div className={styles.cardTopRow}>
-                    <div className={styles.cardAuthor}><span className={styles.featuredAuthorName}>Neha</span><img className={styles.ratingImg} src="/images/icons/stars.svg" alt="5 stars" /></div>
-                    <div className={styles.badgeRow}><span className={`${styles.badge} ${styles.badgeSand}`}>E-Course</span><span className={`${styles.badge} ${styles.badgeRose}`}>Hands On Workshop</span></div>
+                    <div className={styles.tagRow}>
+                      <span className={`${styles.tag} ${styles.tagGhost}`}>Lifestyle Transformation</span>
+                      <span className={`${styles.tag} ${styles.tagGhost}`}>Disease Reversal</span>
+                    </div>
+                    <div className={styles.badgeRow}>
+                      <span className={`${styles.badge} ${styles.badgeSand}`}>E-Course</span>
+                      <span className={`${styles.badge} ${styles.badgeRose}`}>Hands On Workshop</span>
+                    </div>
                   </div>
-                  <p className={styles.featuredTitle}>From chronic bloating to steady energy</p>
+                  <p className={styles.featuredTitle}>&ldquo;From chronic bloating to steady energy&rdquo;</p>
                   <p className={styles.featuredBody}>For months, I felt like I was guessing my way through meals. Every day ended with bloating, fatigue, and a foggy mind. Working with Dr. Gauri helped me understand my digestion, not just my symptoms. Within weeks, the bloating reduced, my energy became more consistent, and I finally felt like I was in control of my health.</p>
-                  <div className={styles.tagRow}><span className={styles.tag}>Lifestyle Transformation</span><span className={styles.tag}>Disease Reversal</span></div>
+                  <div className={styles.featuredFooter}>
+                    <span className={styles.authorName}>Neha</span>
+                    <span className={styles.authorRole}>In the spotlight</span>
+                  </div>
                 </div>
               </FadeIn>
 
-              {/* More testimonial cards */}
-              <FadeIn><TestimonialCard badges={[{ label: "E-Course", cls: "sand" }, { label: "Hands On Workshop", cls: "rose" }]} /></FadeIn>
-              <FadeIn><TestimonialCard badges={[{ label: "E-Course", cls: "sand" }, { label: "Hands On Workshop", cls: "rose" }]} ghost time="5 min ago" /></FadeIn>
-            </div>
+              {/* Remaining testimonials */}
+              {TESTIMONIALS.slice(1).map((t) => (
+                <FadeIn key={t.name}>
+                  <TestimonialCard
+                    name={t.name}
+                    title={t.title}
+                    body={t.body}
+                    portrait={t.portrait}
+                    badges={t.badges}
+                    tags={t.tags}
+                    role={t.role}
+                  />
+                </FadeIn>
+              ))}
+            </motion.div>
           )}
 
           {tab === "blogs" && (
-            <div className={styles.storiesContent}>
+            <motion.div
+              key="blogs"
+              className={styles.storiesContent}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            >
               <FadeIn className={styles.blogGrid}>
                 {BLOG_POSTS.map((post) => (
                   <article key={post.id} className={styles.blogCard}>
@@ -172,36 +301,102 @@ export default function StoriesPage() {
                   </article>
                 ))}
               </FadeIn>
-            </div>
+            </motion.div>
           )}
+          </AnimatePresence>
         </div>
       </div>
     </div>
   );
 }
 
-function TestimonialCard({ badges, ghost, time }: { badges: { label: string; cls: string }[]; ghost?: boolean; time?: string }) {
+function VideoCard({ youtubeId, title, meta }: { youtubeId: string; title: string; meta: string }) {
+  const [playing, setPlaying] = useState(false);
+  const thumb = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+
+  return (
+    <div className={styles.videoCard}>
+      <div className={styles.videoThumb}>
+        {playing ? (
+          <iframe
+            className={styles.videoIframe}
+            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
+            title={title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <>
+            <img src={thumb} alt={title} />
+            <button className={styles.playBtn} onClick={() => setPlaying(true)} aria-label={`Play ${title}`}>
+              <img src="/images/icons/play.svg" alt="Play" width={20} height={20} />
+            </button>
+          </>
+        )}
+      </div>
+      <div className={styles.videoInfo}>
+        <p className={styles.videoTitle}>{title}</p>
+        <p className={styles.videoMeta}>{meta}</p>
+      </div>
+    </div>
+  );
+}
+
+function OutlineStars() {
+  return (
+    <div className={styles.outlineStars} aria-label="5 out of 5 stars">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path d="M10 1.8l2.47 5 5.53.8-4 3.9.94 5.5L10 14.4l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.8z" strokeLinejoin="round" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function TestimonialCard({
+  badges,
+  portrait = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+  name = "Prachi",
+  role,
+  title = "Overwhelming change in my body and diet",
+  body = "Everything from healing, food, nutrition, and the mind is covered. Dr. Gauri also taught how to plan things, implement the learnings, and sustain a new lifestyle.",
+  tags = ["Disease Reversal", "Lifestyle Transformation"],
+}: {
+  badges: { label: string; cls: string }[];
+  portrait?: string;
+  name?: string;
+  role?: string;
+  title?: string;
+  body?: string;
+  tags?: string[];
+}) {
   const badgeClass: Record<string, string> = { teal: "badgeTeal", sand: "badgeSand", rose: "badgeRose" };
   return (
     <div className={styles.testimonialCard}>
-      <div className={styles.cardTopRow}>
-        <div className={styles.cardAuthor}>
-          <div className={styles.authorAvatar}><img src="/images/avatar.png" alt="Prachi" /></div>
-          <span className={styles.authorName}>Prachi</span>
-          <img className={styles.ratingImg} src="/images/icons/stars.svg" alt="5 stars" />
-        </div>
-        <div className={styles.badgeRow}>{badges.map((b) => <span key={b.label} className={`${styles.badge} ${styles[badgeClass[b.cls]]}`}>{b.label}</span>)}</div>
+      <div className={styles.cardPortrait}>
+        <img src={portrait} alt={name} />
       </div>
-      <p className={styles.cardTitle}>Overwhelming change in my body and diet</p>
-      <p className={styles.cardBody}>Everything from healing, food, nutrition, and the mind is covered. Dr. Gauri also taught how to plan things, implement the learnings, and sustain a new lifestyle.</p>
-      {ghost ? (
-        <div className={styles.cardFooterRow}>
-          <div className={styles.tagRow}><span className={`${styles.tag} ${styles.tagGhost}`}>Disease Reversal</span><span className={`${styles.tag} ${styles.tagGhost}`}>Lifestyle Transformation</span></div>
-          <span className={styles.cardTime}>{time}</span>
+      <div className={styles.cardContent}>
+        <div className={styles.cardTopRow}>
+          <div className={styles.tagRow}>
+            {tags.map((t) => (
+              <span key={t} className={`${styles.tag} ${styles.tagGhost}`}>{t}</span>
+            ))}
+          </div>
+          <div className={styles.badgeRow}>
+            {badges.map((b) => (
+              <span key={b.label} className={`${styles.badge} ${styles[badgeClass[b.cls]]}`}>{b.label}</span>
+            ))}
+          </div>
         </div>
-      ) : (
-        <div className={styles.tagRow}><span className={styles.tag}>Lifestyle Transformation</span><span className={styles.tag}>Disease Reversal</span></div>
-      )}
+        <p className={styles.cardTitle}>&ldquo;{title}&rdquo;</p>
+        <p className={styles.cardBody}>{body}</p>
+        <div className={styles.cardFooterRow}>
+          <span className={styles.authorName}>{name}</span>
+          {role && <span className={styles.authorRole}>{role}</span>}
+        </div>
+      </div>
     </div>
   );
 }

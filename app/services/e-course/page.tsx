@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "./e-course.module.css";
 import FadeIn from "@/components/animations/FadeIn";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 // Figma asset URLs
 const imgSubtract   = "/images/subtract.png";
@@ -186,29 +187,7 @@ export default function ECoursePage() {
                 <img src={imgArrowRight} alt="" width={24} height={24} className={styles.arrowRight} />
               </Link>
             </div>
-            <div className={styles.testimonialCard}>
-              <button className={styles.arrowBtn} aria-label="Previous">
-                <img src={imgVector} alt="" width={24} height={24} />
-              </button>
-              <div className={styles.testimonialContent}>
-                <p className={styles.quoteText}>
-                  &ldquo;Everything from healing, food, nutrition, and the mind is covered. Dr. Gauri
-                  also taught how to plan things, implement the learnings, and sustain a new lifestyle.&rdquo;
-                </p>
-                <div className={styles.testimonialAuthor}>
-                  <div className={styles.avatarWrap}>
-                    <img src={imgAvatar} alt="Krutika Talwadel" className={styles.avatarImg} />
-                  </div>
-                  <div>
-                    <p className={styles.authorName}>Krutika Talwadel</p>
-                    <p className={styles.authorRole}>Supply Chain Professional</p>
-                  </div>
-                </div>
-              </div>
-              <button className={styles.arrowBtn} aria-label="Next">
-                <img src={imgVector} alt="" width={24} height={24} className={styles.arrowRight} />
-              </button>
-            </div>
+            <TestimonialCarousel />
           </FadeIn>
 
         </div>
